@@ -4,6 +4,7 @@
   "description": "Visual Corona Virus Development",
   "main": "index.js",
   "scripts": {
+    "server": "browser-sync start --server _site --files _timestamp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

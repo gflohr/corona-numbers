@@ -13,6 +13,7 @@ sub is_leap_year;
 sub write_country;
 sub write_province;
 sub write_file;
+sub fill_world;
 
 my $lingua = 'en';
 my @linguas = qw(de);
@@ -23,13 +24,16 @@ my @types = qw(confirmed deaths recovered);
 
 my %countries;
 my %data = map { $_ => read_data_file $_} @types;
+
 foreach my $type (keys %data) {
 	foreach my $country (keys %{$data{$type}}) {
 		foreach my $province (keys %{$data{$type}->{$country}}) {
-			$countries{$country}->{$province} = $data{$type}->{$country}->{$province};
+			$countries{$country}->{$province}->{$type} = $data{$type}->{$country}->{$province};
 		}
 	}
 }
+
+fill_world \%countries;
 
 foreach my $country (keys %countries) {
 	write_country $country, $countries{$country};
@@ -84,6 +88,28 @@ sub read_data_file {
 	close $fh;
 
 	return \%countries;
+}
+
+sub fill_world {
+	my ($countries) = @_;
+
+	my %world;
+
+	foreach my $country (keys %{$countries}) {
+		my $types = $countries->{$country}->{_total};
+		foreach my $type (keys %$types) {
+			$world{_total}->{$type} ||= [];
+
+			my $data = $countries->{$country}->{_total}->{$type};
+			for (my $i = 0; $i < @{$data}; ++$i) {
+				$world{_total}->{$type}->[$i] += $data->[$i]
+			}
+		}
+	}
+
+	$countries->{world} = \%world;
+
+	return 1;
 }
 
 sub is_leap_year {

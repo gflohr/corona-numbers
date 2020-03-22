@@ -1,9 +1,13 @@
 ---
+helpers:
+  browser-sync: npm run server
 exclude:
 - '*.pl'
 - '*.csv'
 - '*.sh'
 - /node_modules
+- /package.json
+- /package-lock.json
 linguas: [en, de]
 defaults:
 - files:
