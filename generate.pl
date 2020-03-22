@@ -17,7 +17,7 @@ sub write_file;
 my $lingua = 'en';
 my @linguas = qw(de);
 my $wd = dirname __FILE__;
-my $outdir = "$wd/files";
+my $outdir = $wd;
 
 my @types = qw(confirmed deaths recovered);
 
@@ -68,6 +68,19 @@ sub read_data_file {
 		$countries{$country}->{$province} = \@data;
 	}
 
+	foreach my $country (keys %countries) {
+		if (!exists $countries{$country}->{_total}) {
+			my @data;
+			foreach my $province (keys %{$countries{$country}}) {
+				my $province_data = $countries{$country}->{$province};
+				for (my $i; $i < @$province_data; ++$i) {
+					$data[$i] += $province_data->[$i];
+				}
+			}
+			$countries{$country}->{_total} = \@data;
+		}
+	}
+
 	close $fh;
 
 	return \%countries;
@@ -90,7 +103,10 @@ sub write_country {
 sub write_province {
 	my ($country, $province, $data) = @_;
 
-	my ($fcountry, $fprovince) = map { s/[^_a-z]/-/g; $_ } map { lc $_ } ($country, $province);
+	my ($fcountry, $fprovince) =
+		map { s/[^_a-z]+/-/g; $_ }
+		map { lc $_ }
+		($country, $province);
 
 	my $outbase = "$outdir/$lingua/$fcountry";
 	$outbase .= "/$fprovince" if $province ne '_total';
@@ -103,8 +119,22 @@ sub write_province {
 	my $yaml = YAML::XS::Dump(\%stash) . "---\n";
 
 	my $md_file = "$outbase.md";
-
 	write_file $md_file, $yaml;
+
+	my $master = "/$lingua/$fcountry";
+	$master .= "/$fprovince" if $province ne '_total';
+	$master .= '.md';
+	foreach my $other_lingua (@linguas) {
+		$md_file = "$outdir/$other_lingua/$fcountry";
+		$md_file .= "/$fprovince" if $province ne '_total';
+		$md_file .= '.md';
+		$yaml = <<"EOF";
+---
+master: $master
+---
+EOF
+		write_file $md_file, $yaml;
+	}
 }
 
 sub write_file {
