@@ -1,0 +1,16 @@
+	<body>
+		[% INCLUDE "partials/body/header.html" %]
+		<main role="main" class="container">
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<qgoda-content>
+				[% asset.content %]
+				</qgoda-content>
+			</div>
+			[% INCLUDE partials/body/aside.html %]
+		</div>
+		</main>
+
+		[% INCLUDE "partials/body/footer.html" %]
+		[% INCLUDE "functions/scripts.tt" %]
+	</body>

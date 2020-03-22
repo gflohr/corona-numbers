@@ -1,11 +1,6 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>[% asset.title | html %]</title>
-	</head>
-	<body>
-		<h1>[% asset.title | html %]</h1>
-		[% asset.content %]
-	</body>
-</html>
+[%- body = PROCESS "partials/body.html" %]
+[%- head = PROCESS "partials/head.html" %]
+[%- WRAPPER wrappers/html5.html %]
+[%- head %]
+[% body %]
+[% END %]
