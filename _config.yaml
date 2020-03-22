@@ -1,0 +1,16 @@
+---
+exclude:
+- '*.pl'
+- '*.csv'
+- '*.sh'
+- /node_modules
+linguas: [en, de]
+defaults:
+- files:
+  - /en
+  values:
+    lingua: en 
+- files:
+  - /de
+  values:
+    lingua: de
