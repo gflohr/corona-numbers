@@ -15,11 +15,11 @@
 	<tbody>
 		[% FOREACH record IN asset.data %]
 		<tr>
-			<th>[% q.strftime(gtx.gettext('%x'), record.timestamp, asset.lingua) %]</th>
-			<th>[% record.confirmed %]</th>
-			<th>[% record.new %]</th>
-			<th>[% record.recovered %]</th>
-			<th>[% record.deaths %]</th>
+			<th class="date">[% q.strftime(gtx.gettext('%x'), record.timestamp, asset.lingua) %]</th>
+			<td>[% record.confirmed %]</td>
+			<td>[% record.new %]</td>
+			<td>[% record.recovered %]</td>
+			<td>[% record.deaths %]</td>
 		</tr>
 		[% END %]
 	</tbody>
