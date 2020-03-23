@@ -156,7 +156,7 @@ sub write_province {
 	);
 	$stash{province} = $province if $province ne '_total';
 
-	my @data = map { {%{$_}} } @dates;
+	my @data = map { { timestamp => $_ } } @dates;
 	my @types = keys %{$data};
 	for (my $i = 0; $i < @data; ++$i) {
 		foreach my $type (@types) {
@@ -209,14 +209,5 @@ sub write_file {
 sub get_date_for_day_x {
 	my ($x) = @_;
 
-	my $time_t = $start + $x * 24 * 60 * 60;
-	my @time = gmtime $time_t;
-	$time[4] += 1;
-	$time[5] += 1900;
-
-	return {
-		d => $time[3],
-		m => $time[4],
-		y => $time[5],
-	};
+	return $start + $x * 24 * 60 * 60;
 }
