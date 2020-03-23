@@ -6,14 +6,16 @@ use File::Basename qw(dirname);
 use File::Path qw(make_path);
 use Text::CSV;
 use YAML::XS;
+use POSIX qw(mktime);
 
 sub read_data;
 sub read_data_file;
-sub is_leap_year;
 sub write_country;
 sub write_province;
 sub write_file;
 sub fill_world;
+sub get_date_for_day_x;
+sub compute_dates;
 
 my $lingua = 'en';
 my @linguas = qw(de);
@@ -21,6 +23,7 @@ my $wd = dirname __FILE__;
 my $outdir = $wd;
 
 my @types = qw(confirmed deaths recovered);
+my $start = mktime 0, 0, 12, 22, 0, 2020 - 1900;
 
 my %countries;
 my %data = map { $_ => read_data_file $_} @types;
@@ -34,6 +37,7 @@ foreach my $type (keys %data) {
 }
 
 fill_world \%countries;
+my @dates = compute_dates \%countries;
 
 foreach my $country (keys %countries) {
 	write_country $country, $countries{$country};
@@ -57,6 +61,10 @@ sub read_data_file {
 	for (my $i = 4; $i < @{$first_row}; ++$i) {
 		die "$filename: first_row[$i]: $first_row->[$i]"
 		    if $first_row->[$i] !~ m{^([1-9][0-9]*)/([1-9][0-9]*)/([1-9][0-9]*)$};
+		if ($i == 4) {
+			my $date = $first_row->[4];
+			die "$filename does not start at 1/22/20" if $date ne '1/22/20';
+		}
 		push @dates, { d => $1, m => $2, y => $3 + 2000 };
 	}
 
@@ -112,10 +120,16 @@ sub fill_world {
 	return 1;
 }
 
-sub is_leap_year {
-	my ($year) = @_;
+sub compute_dates {
+	my ($countries) = @_;
 
-	return 0 == $year % 4 and 0 != $year % 100 or 0 == $year % 400;
+	my $data = $countries->{world}->{_total}->{confirmed};
+	my @dates;
+	for (my $day = 0; $day < @{$data}; ++$day) {
+		push @dates, get_date_for_day_x $day;
+	}
+
+	return @dates;
 }
 
 sub write_country {
@@ -141,6 +155,21 @@ sub write_province {
 		title => $country,
 	);
 	$stash{province} = $province if $province ne '_total';
+
+	my @data = map { {%{$_}} } @dates;
+	my @types = keys %{$data};
+	for (my $i = 0; $i < @data; ++$i) {
+		foreach my $type (@types) {
+			$data[$i]->{$type} = $data->{$type}->[$i];
+		}
+	}
+
+	my $confirmed = 0;
+	foreach my $set (@data) {
+		$set->{new} = $set->{confirmed} - $confirmed;
+		$confirmed = $set->{confirmed};
+	}
+	$stash{data} = \@data;
 
 	my $yaml = YAML::XS::Dump(\%stash) . "---\n";
 
@@ -175,4 +204,19 @@ sub write_file {
 	$fh->close or die "cannot close '$path': $!";
 	
 	return 1;
+}
+
+sub get_date_for_day_x {
+	my ($x) = @_;
+
+	my $time_t = $start + $x * 24 * 60 * 60;
+	my @time = gmtime $time_t;
+	$time[4] += 1;
+	$time[5] += 1900;
+
+	return {
+		d => $time[3],
+		m => $time[4],
+		y => $time[5],
+	};
 }
