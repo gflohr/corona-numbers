@@ -46,7 +46,7 @@ foreach my $country (keys %countries) {
 sub read_data_file {
 	my ($type) = @_;
 
-	my $filename = "$wd/$type.csv";
+	my $filename = "$wd/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_${type}_global.csv";
 
 	my $csv = Text::CSV->new({ binary => 1, auto_diag => 1 });
 	open my $fh, '<:encoding(utf8)', $filename or die "filename: $!";
