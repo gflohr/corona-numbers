@@ -22,7 +22,7 @@ my @linguas = qw(de);
 my $wd = dirname __FILE__;
 my $outdir = $wd;
 
-my @types = qw(confirmed deaths recovered);
+my @types = qw(confirmed deaths);
 my $start = mktime 0, 0, 12, 22, 0, 2020 - 1900;
 
 my %countries;
