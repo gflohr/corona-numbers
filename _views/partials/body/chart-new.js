@@ -6,8 +6,6 @@
 [% USE q = Qgoda %]
 [% USE gtx = Gettext(config.local.textdomain) %]
 
-	var color = '#ff6a6a';
-
 	// Graphs
 	var ctx = document.getElementById('chartNewCases')
 	// eslint-disable-next-line no-unused-vars
@@ -27,10 +25,10 @@
 				[% END %]
 				],
 				lineTension: 0,
-				backgroundColor: color,
-				borderColor: color,
+				backgroundColor: '#f04848',
+				borderColor: '#f04848',
 				borderWidth: 4,
-				pointBackgroundColor: color
+				pointBackgroundColor: '#f04848'
 			}
 		]
 	  },

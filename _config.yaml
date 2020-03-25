@@ -8,6 +8,7 @@ exclude:
 - /node_modules
 - /package.json
 - /package-lock.json
+- /COVID-19
 linguas: [en, de]
 defaults:
 - files:

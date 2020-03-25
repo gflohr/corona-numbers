@@ -106,7 +106,7 @@ body {
 }
 
 th {
-	text-align: center;
+	text-align: right;
 }
 
 td, th.date {

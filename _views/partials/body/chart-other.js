@@ -6,8 +6,6 @@
 [% USE q = Qgoda %]
 [% USE gtx = Gettext(config.local.textdomain) %]
 
-	var color = '#ff6a6a';
-
 	// Graphs
 	var ctx = document.getElementById('chartOther')
 	// eslint-disable-next-line no-unused-vars
@@ -29,9 +27,9 @@
 				],
 				lineTension: 0,
 				backgroundColor: 'transparent',
-				borderColor: '#ff6a6a',
+				borderColor: '#4486cc',
 				borderWidth: 2,
-				pointBackgroundColor: '#ff6a6a'
+				pointBackgroundColor: '#4486cc'
 			},
 			{
 				label: "[% gtx.gettext('New Confirmed') %]",
