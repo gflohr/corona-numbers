@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: corona-number 1.0.0\n"
 "Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-03-29 13:15+0300\n"
+"PO-Revision-Date: 2020-03-29 18:47+0300\n"
 "Last-Translator: Guido Flohr <guido.flohr@cantanea.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -32,6 +32,8 @@ msgid ""
 "The numbers for the following areas are already included in the numbers for "
 "{country}."
 msgstr ""
+"Die Zahlen für die folgenden Gebiete sind bereits in den Zahlen für "
+"{country} enthalten."
 
 #: ../_views/partials/body/aside.html:12
 #, perl-brace-format
@@ -39,6 +41,8 @@ msgid ""
 "The numbers for the following areas are not included in the numbers for "
 "{country}."
 msgstr ""
+"Die Zahlen für die folgenden Gebiete sind nicht in den Zahlen für {country} "
+"enthalten."
 
 #: ../_views/partials/body/chart-new.js:17
 #: ../_views/partials/body/chart-other.js:17
@@ -911,12 +915,9 @@ msgid "Turkey"
 msgstr "Türkei"
 
 #: ../_views/translate.txt:169
-#, fuzzy
-#| msgctxt "country"
-#| msgid "USA"
 msgctxt "country"
 msgid "US"
-msgstr "US"
+msgstr "USA"
 
 #: ../_views/translate.txt:170
 msgctxt "country"
