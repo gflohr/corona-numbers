@@ -25,7 +25,7 @@ sub area_to_name;
 sub write_search;
 
 my $lingua = 'en';
-my @linguas = qw(de);
+my @linguas = qw(de bg);
 my $wd = dirname __FILE__;
 my $outdir = $wd;
 

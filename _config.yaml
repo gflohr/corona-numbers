@@ -11,7 +11,7 @@ exclude:
 - /COVID-19
 - /LocaleData
 - /logs
-linguas: [en, de]
+linguas: [en, de, bg]
 defaults:
 - files:
   - /en
@@ -21,6 +21,10 @@ defaults:
   - /de
   values:
     lingua: de
+- files:
+  - /bg
+  values:
+    lingua: bg
 po:
   textdomain: corona-numbers
   msgid-bugs-address: Guido Flohr <guido.flohr@cantanea.com>
