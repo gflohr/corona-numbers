@@ -19,16 +19,18 @@ missing but will be implemented soon.
 
 ### COVID-19 Data
 
-You have to create a submodule in the top-level directory:
+This module uses a submodule.  You have to initialize it.
 
 ```bash
-$ git submodule add https://github.com/CSSEGISandData/COVID-19.git
+$ git submodule init
+Submodule 'COVID-19' (https://github.com/CSSEGISandData/COVID-19.git) registered for path 'COVID-19'
+$ git pull --recurse-submodules=yes
+Already up to date.
+Cloning into '/var/www/corona.cantanea.com/COVID-19'...
+Submodule path 'COVID-19': checked out '63649e417fc6750faaec10a8a3826644aefc9fb6'
 ```
 
 This submodule contains the numbers from the Johns Hopkins University.
-
-Note that as of March 24th 2020 the number of recovered persons is no longer
-counted.
 
 ### Qgoda
 
