@@ -1,0 +1,14 @@
+../_views/default.html
+../_views/functions/scripts.tt
+../_views/partials/body.html
+../_views/partials/body/aside.html
+../_views/partials/body/chart-new.js
+../_views/partials/body/chart-other.js
+../_views/partials/body/charts.html
+../_views/partials/body/footer.html
+../_views/partials/body/header.html
+../_views/partials/body/table.html
+../_views/partials/head.html
+../_views/wrappers/html5.html
+markdown.pot
+perl.pot
