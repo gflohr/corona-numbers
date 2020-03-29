@@ -164,8 +164,6 @@ sub write_country {
 sub write_province {
 	my ($country, $province, $data) = @_;
 
-return if $country !~ /^A/;
-
 	my ($fcountry, $fprovince) = map { area_to_name $_ } ($country, $province);
 
 	my $outbase = "$outdir/$lingua/$fcountry";

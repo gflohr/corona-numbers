@@ -3,7 +3,7 @@
 <nav id="sidenav" class="col-md-2 d-none d-md-block bg-light sidebar">
 	<div class="sidebar-sticky">
 		[% IF asset.area_context =='province' %]
-		<h3 class="h3">[% gtx.gettext(asset.country) %]</h3>
+		<h3 class="h3">[% gtx.pgettext('country', asset.country) %]</h3>
 			<div class="aside-comment"><em>
 			[% IF asset.split %]
 				[% gtx.xgettext('The numbers for the following areas are already included in the numbers for {country}.',
