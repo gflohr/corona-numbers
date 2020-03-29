@@ -10,6 +10,7 @@ use POSIX qw(mktime);
 use Locale::Messages 1.16 qw(textdomain bindtextdomain bind_textdomain_filter
                              pgettext);
 use JSON;
+use Locale::Language qw(code2language);
 
 sub read_data;
 sub read_data_file;
@@ -48,6 +49,16 @@ foreach my $type (keys %data) {
 
 fill_world \%countries;
 my @dates = compute_dates \%countries;
+
+my %language_codes = (
+	en => 'English',
+	de => 'Deutsch',
+	bg => 'Български',
+);
+
+foreach my $code (keys %language_codes) {
+	Locale::Messages::turn_utf_8_on($language_codes{$code});
+}
 
 foreach my $country (keys %countries) {
 	write_country $country, $countries{$country};
@@ -183,6 +194,7 @@ sub write_province {
 		name => $name,
 		title => $title,
 		split => $split{$country},
+		language_codes => \%language_codes,
 	);
 	$stash{province} = $province if $province ne '_total';
 	$stash{fprovince} = $fprovince if $province ne '_total';
@@ -221,6 +233,7 @@ sub write_province {
 	$stash{data} = \@data;
 
 	my $yaml = YAML::XS::Dump(\%stash) . "---\n";
+	Locale::Messages::turn_utf_8_on($yaml);
 
 	my $md_file = "$outbase.md";
 	write_file $md_file, $yaml;

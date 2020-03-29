@@ -2,6 +2,21 @@
 [% USE q = Qgoda %]
 <nav id="sidenav" class="col-md-2 d-none d-md-block bg-light sidebar">
 	<div class="sidebar-sticky">
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle w-75" type="button"
+				id="dropdownMenuButton" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				[% lingua = asset.lingua %]
+				[% asset.language_codes.$lingua %]
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				[% FOREACH lingua IN config.linguas %]
+					<a class="dropdown-item"
+					   href="[% q.link(name = asset.name lingua = lingua) %]">[% asset.language_codes.$lingua %]
+					</a>
+				[% END %]
+			</div>
+		</div>
 		[% IF asset.area_context =='province' %]
 		<h3 class="h3">[% gtx.pgettext('country', asset.country) %]</h3>
 			<div class="aside-comment"><em>
