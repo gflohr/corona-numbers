@@ -1,4 +1,4 @@
-[% USE gtx = Gettext(config.po.textdomain) %]
+[% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
 [% USE q = Qgoda %]
 <h2>[% gtx.gettext('Data') %]</h2>
 <p>[% gtx.gettext('All data provided by Johns Hopkins University') %]</p>

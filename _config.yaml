@@ -9,6 +9,7 @@ exclude:
 - /package.json
 - /package-lock.json
 - /COVID-19
+- /LocaleData
 linguas: [en, de]
 defaults:
 - files:
