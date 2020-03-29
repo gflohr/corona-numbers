@@ -1,6 +1,8 @@
 [% USE gtx = Gettext(config.po.textdomain) %]
+[% USE q = Qgoda %]
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-	<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">cantanea Corona Data</a>
+	<a class="navbar-brand col-sm-3 col-md-2 mr-0"
+		href="[% q.llink(name = 'world') %]">cantanea Corona Data</a>
 	<input class="form-control form-control-dark w-100" type="text" id="search"
 		   placeholder="[% gtx.gettext('Search') %]" aria-label="[% gtx.gettext('Search') %]">
 	<a class="nav-link" href="https://github.com/gflohr/corona-numbers">[% gtx.gettext('About') %]</a>
