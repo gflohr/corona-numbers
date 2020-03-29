@@ -13,7 +13,7 @@
 	  </tr>
 	</thead>
 	<tbody>
-		[% FOREACH record IN asset.data %]
+		[% FOREACH record IN asset.data.reverse %]
 		<tr>
 			<th class="date">[% q.strftime(gtx.gettext('%x'), record.timestamp, asset.lingua) %]</th>
 			<td>[% record.confirmed %]</td>
