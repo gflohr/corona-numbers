@@ -4,7 +4,7 @@
 	feather.replace()
 
 [% USE q = Qgoda %]
-[% USE gtx = Gettext(config.local.textdomain) %]
+[% USE gtx = Gettext(config.po.textdomain) %]
 
 	// Graphs
 	var ctx = document.getElementById('chartNewCases')

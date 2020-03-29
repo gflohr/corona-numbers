@@ -19,3 +19,9 @@ defaults:
   - /de
   values:
     lingua: de
+po:
+  textdomain: corona-numbers
+  msgid_bugs_address: Guido Flohr <guido.flohr@cantanea.com>
+  copyright-holder: cantanea EOOD <http://www.cantanea.com/>
+  reload: 1
+
