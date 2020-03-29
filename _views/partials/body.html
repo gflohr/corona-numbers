@@ -13,7 +13,9 @@
 							[% IF asset.name == 'world' %]
 								<li class="breadcrumb-item active">[% gtx.gettext('World') %]</li>
 							[% ELSE %]
-								<li class="breadcrumb-item">[% q.lanchor(name='world') %]</li>
+								<li class="breadcrumb-item">
+									<a href="[% q.llink(name='world') %]">[% gtx.gettext('World') %]</a>
+								</li>
 								[% IF asset.province %]
 								<li class="breadcrumb-item">[% q.lanchor(name=asset.fcountry) %]</li>
 								<li class="breadcrumb-item active">[% gtx.pgettext('province', asset.province) %]</li>
