@@ -16,9 +16,9 @@
 								<li class="breadcrumb-item">[% q.lanchor(name='world') %]</li>
 								[% IF asset.province %]
 								<li class="breadcrumb-item">[% q.lanchor(name=asset.fcountry) %]</li>
-								<li class="breadcrumb-item active">[% asset.province %]</li>
+								<li class="breadcrumb-item active">[% gtx.pgettext('province', asset.province) %]</li>
 								[% ELSE %]
-								<li class="breadcrumb-item active">[% gtx.gettext(asset.country) %]</li>
+								<li class="breadcrumb-item active">[% gtx.pgettext('country', asset.country) %]</li>
 								[% END %]
 							[% END %]
 						</ol>

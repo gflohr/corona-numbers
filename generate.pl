@@ -178,19 +178,23 @@ sub write_province {
 	$stash{province} = $province if $province ne '_total';
 	$stash{fprovince} = $fprovince if $province ne '_total';
 
-$DB::single = 1;
 	my @areas = grep { $_ ne '_total' } keys %{$countries{$country}};
+	my $area_context;
 	if ($country eq 'world') {
 		@areas = map { area_to_name $_ } grep { $_ ne 'world' } sort keys %countries;
+		$area_context = 'country';
 	} elsif (@areas) {
 		@areas = map { "$fcountry/$_"}
 		map { area_to_name $_ }
 		grep { $_ ne '_total' }
 		sort keys %{$countries{$country}};
+		$area_context = 'province';
 	} else {
+		$area_context = 'country';
 		@areas = map { area_to_name $_ } grep { $_ ne 'world' } sort keys %countries;
 	}
 	$stash{areas} = \@areas;
+	$stash{area_context} = $area_context;
 
 	my @data = map { { timestamp => $_ } } @dates;
 	my @types = keys %{$data};

@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../_views/partials/body.html:11
 msgid "Breadcrumb"
-msgstr ""
+msgstr "Brotkrumennavigation"
 
 #: ../_views/partials/body.html:14
 msgid "World"
-msgstr ""
+msgstr "Welt"
 
 #: ../_views/partials/body/chart-new.js:17
 #: ../_views/partials/body/chart-other.js:17
@@ -898,7 +898,7 @@ msgstr "Türkei"
 
 #: ../_views/translate.txt:169
 msgctxt "country"
-msgid "US"
+msgid "USA"
 msgstr "US"
 
 #: ../_views/translate.txt:170

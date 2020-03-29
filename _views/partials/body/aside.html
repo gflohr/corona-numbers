@@ -15,7 +15,7 @@
 			<li class="nav-item">
 				<a href="[% q.llink(name=area) %]"
 				   class="[% class %]">
-				   [% gtx.gettext(q.lxref('title', name=area)) %]
+				   [% gtx.pgettext(asset.area_context, q.lxref('title', name=area)) %]
 				</a>
 			</li>
 			[% END %]
