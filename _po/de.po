@@ -22,9 +22,23 @@ msgstr ""
 msgid "Breadcrumb"
 msgstr "Brotkrumennavigation"
 
-#: ../_views/partials/body.html:14
+#: ../_views/partials/body.html:14 ../_views/partials/body.html:17
 msgid "World"
 msgstr "Welt"
+
+#: ../_views/partials/body/aside.html:9
+#, perl-brace-format
+msgid ""
+"The numbers for the following areas are already included in the numbers for "
+"{country}."
+msgstr ""
+
+#: ../_views/partials/body/aside.html:12
+#, perl-brace-format
+msgid ""
+"The numbers for the following areas are not included in the numbers for "
+"{country}."
+msgstr ""
 
 #: ../_views/partials/body/chart-new.js:17
 #: ../_views/partials/body/chart-other.js:17
@@ -897,8 +911,11 @@ msgid "Turkey"
 msgstr "Türkei"
 
 #: ../_views/translate.txt:169
+#, fuzzy
+#| msgctxt "country"
+#| msgid "USA"
 msgctxt "country"
-msgid "USA"
+msgid "US"
 msgstr "US"
 
 #: ../_views/translate.txt:170

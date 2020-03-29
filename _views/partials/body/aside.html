@@ -2,8 +2,17 @@
 [% USE q = Qgoda %]
 <nav id="sidenav" class="col-md-2 d-none d-md-block bg-light sidebar">
 	<div class="sidebar-sticky">
-		[% IF asset.province %]
+		[% IF asset.area_context =='province' %]
 		<h3 class="h3">[% gtx.gettext(asset.country) %]</h3>
+			<div class="aside-comment"><em>
+			[% IF asset.split %]
+				[% gtx.xgettext('The numbers for the following areas are already included in the numbers for {country}.',
+					country => gtx.pgettext('country', asset.country)) %]
+			[% ELSE %]
+				[% gtx.xgettext('The numbers for the following areas are not included in the numbers for {country}.',
+					country => gtx.pgettext('country', asset.country)) %]
+			[% END %]
+			</em></div>
 		[% END %]
 		<ul class="nav flex-column">
 			[% FOREACH area IN asset.areas %]

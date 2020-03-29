@@ -19,8 +19,18 @@ msgstr ""
 msgid "Breadcrumb"
 msgstr ""
 
-#: ../_views/partials/body.html:14
+#: ../_views/partials/body.html:14 ../_views/partials/body.html:17
 msgid "World"
+msgstr ""
+
+#: ../_views/partials/body/aside.html:9
+#, perl-brace-format
+msgid "The numbers for the following areas are already included in the numbers for {country}."
+msgstr ""
+
+#: ../_views/partials/body/aside.html:12
+#, perl-brace-format
+msgid "The numbers for the following areas are not included in the numbers for {country}."
 msgstr ""
 
 #: ../_views/partials/body/chart-new.js:17

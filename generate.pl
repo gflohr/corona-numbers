@@ -28,9 +28,11 @@ my @types = qw(confirmed recovered deaths);
 my $start = mktime 0, 0, 12, 22, 0, 2020 - 1900;
 
 my %countries;
-my %data = map { $_ => read_data_file $_} @types;
+my %split;
 my %pot_countries;
 my %pot_provinces;
+
+my %data = map { $_ => read_data_file $_} @types;
 
 foreach my $type (keys %data) {
 	foreach my $country (keys %{$data{$type}}) {
@@ -103,6 +105,7 @@ sub read_data_file {
 				}
 			}
 			$countries{$country}->{_total} = \@data;
+			$split{$country} = 1;
 		}
 	}
 
@@ -174,6 +177,7 @@ sub write_province {
 		fcountry => $fcountry,
 		name => $name,
 		title => $title,
+		split => $split{$country},
 	);
 	$stash{province} = $province if $province ne '_total';
 	$stash{fprovince} = $fprovince if $province ne '_total';
