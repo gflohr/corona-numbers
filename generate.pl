@@ -184,10 +184,10 @@ sub write_province {
 		@areas = map { area_to_name $_ } grep { $_ ne 'world' } sort keys %countries;
 		$area_context = 'country';
 	} elsif (@areas) {
-		@areas = map { "$fcountry/$_"}
-		map { area_to_name $_ }
-		grep { $_ ne '_total' }
-		sort keys %{$countries{$country}};
+		@areas =
+			map { area_to_name $_ }
+			grep { $_ ne '_total' }
+			sort keys %{$countries{$country}};
 		$area_context = 'province';
 	} else {
 		$area_context = 'country';

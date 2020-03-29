@@ -13,9 +13,18 @@
 				[% class = 'nav-link area-link' %]
 			[% END %]
 			<li class="nav-item">
-				<a href="[% q.llink(name=area) %]"
+				[% IF asset.area_context == 'province' %]
+					[% name = asset.fcountry _ '/' _ area %]
+				[% ELSE %]
+					[% name = area %]
+				[% END %]
+				<a href="[% q.llink(name=name) %]"
 				   class="[% class %]">
-				   [% gtx.pgettext(asset.area_context, q.lxref('title', name=area)) %]
+					[% IF asset.area_context == 'province' %]
+						[% gtx.pgettext(asset.area_context, q.lxref('province', name = name)) %]
+					[% ELSE %]
+						[% gtx.pgettext(asset.area_context, q.lxref('title', name = area)) %]
+					[% END %]
 				</a>
 			</li>
 			[% END %]
