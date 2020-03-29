@@ -151,8 +151,12 @@ sub write_province {
 	my $outbase = "$outdir/$lingua/$fcountry";
 	$outbase .= "/$fprovince" if $province ne '_total';
 
+	my $name = $fcountry;
+	$name .= "/$fprovince" if $province ne '_total';
+
 	my %stash = (
 		title => $country,
+		name => $name,
 	);
 	$stash{province} = $province if $province ne '_total';
 
