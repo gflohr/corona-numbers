@@ -9,3 +9,5 @@
 /_po/*.mo
 /_views/translate.txt
 /assets/scripts/search_*.js
+/lib
+/logs
