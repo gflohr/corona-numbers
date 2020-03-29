@@ -23,9 +23,9 @@ $(function() {
 	});
 
 	$links.each(function(index) {
-		$(this).html('<a class="' + items[index].klass + '" href="'
-			+ items[index].href + '">' + items[index].text + '</a>'
-		);
+		$(this).text(items[index].text);
+		$(this).attr('href', items[index].href);
+		$(this).attr('class', items[index].klass);
 	});
 
 	console.log(items);
