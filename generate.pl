@@ -16,6 +16,7 @@ sub write_file;
 sub fill_world;
 sub get_date_for_day_x;
 sub compute_dates;
+sub write_pot;
 
 my $lingua = 'en';
 my @linguas = qw(de);
@@ -27,6 +28,7 @@ my $start = mktime 0, 0, 12, 22, 0, 2020 - 1900;
 
 my %countries;
 my %data = map { $_ => read_data_file $_} @types;
+my %pot;
 
 foreach my $type (keys %data) {
 	foreach my $country (keys %{$data{$type}}) {
@@ -42,6 +44,8 @@ my @dates = compute_dates \%countries;
 foreach my $country (keys %countries) {
 	write_country $country, $countries{$country};
 }
+
+write_pot;
 
 sub read_data_file {
 	my ($type) = @_;
@@ -71,7 +75,12 @@ sub read_data_file {
 	my %countries;
 	while (my $row = $csv->getline ($fh)) {
 		my ($province, $country) = @$row;
-		$province = '_total' if !length $province;
+		$pot{$country} = 1;
+		if (length $province) {
+			$pot{$province} = 1;
+		} else {
+			$province = '_total' if !length $province;
+		}
 
 		my @data;
 		for (my $i = 4; $i < @{$first_row}; ++$i) {
@@ -214,4 +223,21 @@ sub get_date_for_day_x {
 	my ($x) = @_;
 
 	return $start + $x * 24 * 60 * 60;
+}
+
+sub write_pot {
+	my $outfile = "$outdir/_views/translate.txt";
+	my $out = <<'EOF';
+# This file is not really a template but only contains strings that should
+# be added to the master translation catalog.
+[% USE gtx = Gettext(config.po.textdomain) %]
+EOF
+
+	foreach my $key (sort keys %pot) {
+		$out .= <<"EOF";
+[\% gtx.gettext('$key') \%]
+EOF
+	}
+
+	write_file $outfile, $out;
 }
