@@ -27,9 +27,9 @@
 				],
 				lineTension: 0,
 				backgroundColor: 'transparent',
-				borderColor: '#4486cc',
+				borderColor: '#aa0008',
 				borderWidth: 2,
-				pointBackgroundColor: '#4486cc'
+				pointBackgroundColor: '#aa0008'
 			},
 			{
 				label: "[% gtx.gettext('New Confirmed') %]",
@@ -43,6 +43,19 @@
 				borderColor: '#f04848',
 				borderWidth: 2,
 				pointBackgroundColor: '#f04848'
+			},
+			{
+				label: "[% gtx.gettext('Recovered') %]",
+				data: [
+				[% FOREACH record IN asset.data %]
+					[% record.recovered %],
+				[% END %]
+				],
+				lineTension: 0,
+				backgroundColor: 'transparent',
+				borderColor: '#4486cc',
+				borderWidth: 2,
+				pointBackgroundColor: '#4486cc'
 			},
 			{
 				label: "[% gtx.gettext('Deaths') %]",
