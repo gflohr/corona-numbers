@@ -28,5 +28,17 @@ $(function() {
 		$(this).attr('class', items[index].klass);
 	});
 
-	console.log(items);
+	// Setup search.
+	function onSelectItem(item, element) {
+		document.location.href = item.value;
+	}
+
+	$('#search').autocomplete({
+		source: search,
+		onSelectItem: onSelectItem,
+		highlightClass: 'text-success',
+		maximumItems: 15,
+		threshold: 2,
+		treshold: 2,
+	});
 });

@@ -122,3 +122,7 @@ td, th.date {
 .sidebar-sticky {
 	padding-left: 1rem;
 }
+
+.dropdown-menu {
+	left: 17.5rem;
+}

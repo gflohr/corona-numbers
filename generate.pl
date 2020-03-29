@@ -7,6 +7,9 @@ use File::Path qw(make_path);
 use Text::CSV;
 use YAML::XS;
 use POSIX qw(mktime);
+use Locale::Messages 1.16 qw(textdomain bindtextdomain bind_textdomain_filter
+                             pgettext);
+use JSON;
 
 sub read_data;
 sub read_data_file;
@@ -18,6 +21,7 @@ sub get_date_for_day_x;
 sub compute_dates;
 sub write_pot;
 sub area_to_name;
+sub write_search;
 
 my $lingua = 'en';
 my @linguas = qw(de);
@@ -50,6 +54,7 @@ foreach my $country (keys %countries) {
 }
 
 write_pot;
+write_search;
 
 sub read_data_file {
 	my ($type) = @_;
@@ -158,6 +163,8 @@ sub write_country {
 
 sub write_province {
 	my ($country, $province, $data) = @_;
+
+return if $country !~ /^A/;
 
 	my ($fcountry, $fprovince) = map { area_to_name $_ } ($country, $province);
 
@@ -285,4 +292,34 @@ sub area_to_name {
 	$area =~ s/[^_a-z]+/-/g;
 
 	return $area;
+}
+
+sub write_search {
+	Locale::Messages->select_package('gettext_dumb');
+
+	my $textdomain = 'corona-numbers';
+	textdomain $textdomain;
+	bindtextdomain $textdomain, "$wd/LocaleData";
+	bind_textdomain_filter $textdomain, \&Locale::Messages::turn_utf_8_on;
+
+	foreach my $code ($lingua, @linguas) {
+		$ENV{LANGUAGE} = $code;
+		my %search;
+		foreach my $country (keys %countries) {
+			next if 'world' eq $country;
+			my $translated = pgettext(country => $country);
+			my $path = "/$code/" . (area_to_name $country) . '/';
+			$search{$translated} = $path;
+
+			foreach my $province (keys %{$countries{$country}}) {
+				next if '_total' eq $province;
+				my $translated_province = pgettext(province => $province);
+				my $subpath = $path . (area_to_name $province) . '/';
+				$search{"$translated/$translated_province"} = $subpath;
+			}
+		}
+
+		my $json = JSON->new->utf8(0)->pretty->encode(\%search);
+		write_file "$wd/assets/scripts/search_$code.js", "var search=$json";
+	}
 }
