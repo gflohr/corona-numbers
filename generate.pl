@@ -28,7 +28,8 @@ my $start = mktime 0, 0, 12, 22, 0, 2020 - 1900;
 
 my %countries;
 my %data = map { $_ => read_data_file $_} @types;
-my %pot;
+my %pot_countries;
+my %pot_provinces;
 
 foreach my $type (keys %data) {
 	foreach my $country (keys %{$data{$type}}) {
@@ -75,9 +76,11 @@ sub read_data_file {
 	my %countries;
 	while (my $row = $csv->getline ($fh)) {
 		my ($province, $country) = @$row;
-		$pot{$country} = 1;
+		next if 'Canada' eq $country and 'Recovered' eq $province;
+		$country =~ s{\*$}{}; # Taiwan.
+		$pot_countries{$country} = 1;
 		if (length $province) {
-			$pot{$province} = 1;
+			$pot_provinces{$province} = '1';
 		} else {
 			$province = '_total' if !length $province;
 		}
@@ -233,9 +236,14 @@ sub write_pot {
 [% USE gtx = Gettext(config.po.textdomain) %]
 EOF
 
-	foreach my $key (sort keys %pot) {
+	foreach my $key (sort keys %pot_countries) {
 		$out .= <<"EOF";
-[\% gtx.gettext('$key') \%]
+[\% gtx.pgettext("country", "$key") \%]
+EOF
+	}
+	foreach my $key (sort keys %pot_provinces) {
+		$out .= <<"EOF";
+[\% gtx.pgettext("province", "$key") \%]
 EOF
 	}
 

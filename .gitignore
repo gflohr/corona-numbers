@@ -4,3 +4,5 @@
 /_timestamp
 /_site
 /node_modules
+/_po/*.gmo
+/_po/*.mo

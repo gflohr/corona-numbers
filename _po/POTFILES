@@ -9,6 +9,7 @@
 ../_views/partials/body/header.html
 ../_views/partials/body/table.html
 ../_views/partials/head.html
+../_views/translate.txt
 ../_views/wrappers/html5.html
 markdown.pot
 perl.pot
