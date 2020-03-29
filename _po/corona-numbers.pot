@@ -15,6 +15,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
+#: ../_views/partials/body.html:11
+msgid "Breadcrumb"
+msgstr ""
+
+#: ../_views/partials/body.html:14
+msgid "World"
+msgstr ""
+
 #: ../_views/partials/body/chart-new.js:17
 #: ../_views/partials/body/chart-other.js:17
 #: ../_views/partials/body/table.html:18

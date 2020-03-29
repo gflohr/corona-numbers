@@ -18,6 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.3\n"
 
+#: ../_views/partials/body.html:11
+msgid "Breadcrumb"
+msgstr ""
+
+#: ../_views/partials/body.html:14
+msgid "World"
+msgstr ""
+
 #: ../_views/partials/body/chart-new.js:17
 #: ../_views/partials/body/chart-other.js:17
 #: ../_views/partials/body/table.html:18
@@ -261,7 +269,7 @@ msgstr "Costa Rica"
 #: ../_views/translate.txt:43
 msgctxt "country"
 msgid "Cote d'Ivoire"
-msgstr "Cote d'Ivoire"
+msgstr "Côte d’Ivoire"
 
 #: ../_views/translate.txt:44
 msgctxt "country"

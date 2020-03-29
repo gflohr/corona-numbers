@@ -1,20 +1,24 @@
 [% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
+[% USE q = Qgoda %]
 <nav id="sidenav" class="col-md-2 d-none d-md-block bg-light sidebar">
 	<div class="sidebar-sticky">
 		[% IF asset.province %]
 		<h3 class="h3">[% gtx.gettext(asset.country) %]</h3>
 		[% END %]
 		<ul class="nav flex-column">
-			<li class="nav-item area-link">
-				<a class="nav-link" href="/de/italy">
-					Italy
+			[% FOREACH area IN asset.areas %]
+			[% IF area == name %]
+				[% class = 'nav-link area-link' %]
+			[% ELSE %]
+				[% class = 'nav-link area-link' %]
+			[% END %]
+			<li class="nav-item">
+				<a href="[% q.llink(name=area) %]"
+				   class="[% class %]">
+				   [% gtx.gettext(q.lxref('title', name=area)) %]
 				</a>
 			</li>
-			<li class="nav-item area-link">
-				<a class="nav-link active" href="/de/germany">
-					Germany
-				</a>
-			</li>
+			[% END %]
 		</ul>
 	</div>
 </nav>

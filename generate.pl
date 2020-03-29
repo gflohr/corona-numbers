@@ -17,6 +17,7 @@ sub fill_world;
 sub get_date_for_day_x;
 sub compute_dates;
 sub write_pot;
+sub area_to_name;
 
 my $lingua = 'en';
 my @linguas = qw(de);
@@ -155,10 +156,7 @@ sub write_country {
 sub write_province {
 	my ($country, $province, $data) = @_;
 
-	my ($fcountry, $fprovince) =
-		map { s/[^_a-z]+/-/g; $_ }
-		map { lc $_ }
-		($country, $province);
+	my ($fcountry, $fprovince) = map { area_to_name $_ } ($country, $province);
 
 	my $outbase = "$outdir/$lingua/$fcountry";
 	$outbase .= "/$fprovince" if $province ne '_total';
@@ -179,6 +177,20 @@ sub write_province {
 	);
 	$stash{province} = $province if $province ne '_total';
 	$stash{fprovince} = $fprovince if $province ne '_total';
+
+$DB::single = 1;
+	my @areas = grep { $_ ne '_total' } keys %{$countries{$country}};
+	if ($country eq 'world') {
+		@areas = map { area_to_name $_ } grep { $_ ne 'world' } sort keys %countries;
+	} elsif (@areas) {
+		@areas = map { "$fcountry/$_"}
+		map { area_to_name $_ }
+		grep { $_ ne '_total' }
+		sort keys %{$countries{$country}};
+	} else {
+		@areas = map { area_to_name $_ } grep { $_ ne 'world' } sort keys %countries;
+	}
+	$stash{areas} = \@areas;
 
 	my @data = map { { timestamp => $_ } } @dates;
 	my @types = keys %{$data};
@@ -256,4 +268,13 @@ EOF
 	}
 
 	write_file $outfile, $out;
+}
+
+sub area_to_name {
+	my ($area) = @_;
+
+	$area = lc $area;
+	$area =~ s/[^_a-z]+/-/g;
+
+	return $area;
 }

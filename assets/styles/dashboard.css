@@ -118,3 +118,7 @@ td, th.date {
 	font-size: 2rem;
 	font-weight: 500;
 }
+
+.sidebar-sticky {
+	padding-left: 1rem;
+}

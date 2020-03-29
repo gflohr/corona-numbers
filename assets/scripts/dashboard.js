@@ -7,8 +7,8 @@ $(function() {
 		items[index] = {
 			elem: $(this),
 			text: $(this).text(),
-			href: $(this).find('a').attr('href'),
-			klass: $(this).find('a').attr('class'),
+			href: $(this).attr('href'),
+			klass: $(this).attr('class'),
 		}
 	});
 
