@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: corona-number 1.0.0\n"
 "Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-03-29 18:47+0300\n"
+"PO-Revision-Date: 2020-03-29 22:10+0300\n"
 "Last-Translator: Guido Flohr <guido.flohr@cantanea.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -26,7 +26,7 @@ msgstr "Brotkrumennavigation"
 msgid "World"
 msgstr "Welt"
 
-#: ../_views/partials/body/aside.html:9
+#: ../_views/partials/body/aside.html:24
 #, perl-brace-format
 msgid ""
 "The numbers for the following areas are already included in the numbers for "
@@ -35,7 +35,7 @@ msgstr ""
 "Die Zahlen für die folgenden Gebiete sind bereits in den Zahlen für "
 "{country} enthalten."
 
-#: ../_views/partials/body/aside.html:12
+#: ../_views/partials/body/aside.html:27
 #, perl-brace-format
 msgid ""
 "The numbers for the following areas are not included in the numbers for "
@@ -76,6 +76,18 @@ msgstr "Neue Fälle pro Tag"
 #: ../_views/partials/body/charts.html:5
 msgid "Accumulated Cases and Deaths"
 msgstr "Akkumulierte Fälle und Todesfälle"
+
+#: ../_views/partials/body/header.html:7
+msgid "Search"
+msgstr "Suche"
+
+#: ../_views/partials/body/header.html:8
+msgid "About"
+msgstr "Info"
+
+#: ../_views/partials/body/header.html:9
+msgid "Legal Statement"
+msgstr "Impressum"
 
 #: ../_views/partials/body/table.html:3
 msgid "Data"
