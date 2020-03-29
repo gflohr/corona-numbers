@@ -166,11 +166,19 @@ sub write_province {
 	my $name = $fcountry;
 	$name .= "/$fprovince" if $province ne '_total';
 
+	my $title = $country;
+	$title .= "/$province" if $province ne '_total';
+
+	$title = 'World' if $country eq 'world';
+
 	my %stash = (
-		title => $country,
+		country => $country,
+		fcountry => $fcountry,
 		name => $name,
+		title => $title,
 	);
 	$stash{province} = $province if $province ne '_total';
+	$stash{fprovince} = $fprovince if $province ne '_total';
 
 	my @data = map { { timestamp => $_ } } @dates;
 	my @types = keys %{$data};

@@ -112,3 +112,8 @@ th {
 td, th.date {
 	text-align: right;
 }
+
+.breadcrumb-item {
+	font-size: 2rem;
+	font-weight: 500;
+}
