@@ -126,6 +126,11 @@ td, th.date {
 .dropdown-menu {
 	left: 17.5rem;
 }
+@media (max-width: 600px) {
+	.dropdown-menu {
+		left: 0;
+	}		
+}
 
 .nav-link {
 	white-space: nowrap;
