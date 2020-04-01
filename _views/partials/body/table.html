@@ -9,6 +9,7 @@
 		<th>[% gtx.gettext('Date') %]</th>
 		<th>[% gtx.gettext('Confirmed') %]</th>
 		<th>[% gtx.gettext('New Confirmed') %]</th>
+		<th>[% gtx.gettext('Recovered') %]</th>
 		<th>[% gtx.gettext('Deaths') %]</th>
 	  </tr>
 	</thead>
@@ -18,6 +19,7 @@
 			<th class="date">[% q.strftime(gtx.gettext('%x'), record.timestamp, asset.lingua) %]</th>
 			<td>[% record.confirmed %]</td>
 			<td>[% record.new %]</td>
+			<td>[% record.recovered %]</td>
 			<td>[% record.deaths %]</td>
 		</tr>
 		[% END %]
