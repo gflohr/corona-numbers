@@ -6,6 +6,14 @@
 [% USE q = Qgoda %]
 [% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
 
+	var options = {
+		displayLegend: true,
+	};
+
+	if (window.screen.availWidth < 600) {
+		options.displayLegend = false;
+	}
+
 	// Graphs
 	var ctx = document.getElementById('chartOther')
 	// eslint-disable-next-line no-unused-vars
@@ -81,7 +89,8 @@
 		  }]
 		},
 		legend: {
-			display: true
+			display: options.displayLegend,
+			position: 'bottom',
 		}
 	  }
 	})
