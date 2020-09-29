@@ -19,16 +19,26 @@
 		],
 		datasets: [
 			{
+				label: "[% gtx.gettext('New Confirmed') %]",
 				data: [
-				[% FOREACH record IN asset.data %]
-					[% record.new %],
-				[% END %]
+					[% FOREACH record IN asset.data %]
+						[% record.new %],
+					[% END %]
 				],
 				lineTension: 0,
 				backgroundColor: '#f04848',
 				borderColor: '#f04848',
 				borderWidth: 4,
 				pointBackgroundColor: '#f04848'
+			},
+			{
+				label: "[% gtx.gettext('7-day Average') %]",
+				data: [
+					[% FOREACH record IN asset.data %]
+						[% record.new7 %],
+					[% END %]
+				],
+				type: 'line'
 			}
 		]
 	  },
@@ -41,7 +51,7 @@
 		  }]
 		},
 		legend: {
-		  display: false
+		  display: true
 		}
 	  }
 	})

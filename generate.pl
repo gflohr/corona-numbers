@@ -228,7 +228,6 @@ sub write_province {
 
 	my $confirmed = 0;
 	my @last_week;
-	my @last_month;
 	foreach my $set (@data) {
 		$set->{new} = $set->{confirmed} - $confirmed;
 		$confirmed = $set->{confirmed};
@@ -236,7 +235,6 @@ sub write_province {
 		push @last_week, $set->{new};
 
 		shift @last_week if @last_week > 7;
-		shift @last_month if @last_month > 30;
 
 		$set->{new7} = sum(@last_week) / scalar @last_week;
 	}
