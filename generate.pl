@@ -11,6 +11,7 @@ use Locale::Messages 1.16 qw(textdomain bindtextdomain bind_textdomain_filter
                              pgettext);
 use JSON;
 use Locale::Language qw(code2language);
+use List::Util qw(sum);
 
 sub read_data;
 sub read_data_file;
@@ -226,10 +227,20 @@ sub write_province {
 	}
 
 	my $confirmed = 0;
+	my @last_week;
+	my @last_month;
 	foreach my $set (@data) {
 		$set->{new} = $set->{confirmed} - $confirmed;
 		$confirmed = $set->{confirmed};
+
+		push @last_week, $set->{new};
+
+		shift @last_week if @last_week > 7;
+		shift @last_month if @last_month > 30;
+
+		$set->{new7} = sum(@last_week) / scalar @last_week;
 	}
+
 	$stash{data} = \@data;
 
 	my $yaml = YAML::XS::Dump(\%stash) . "---\n";
