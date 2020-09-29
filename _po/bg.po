@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: corona-numbers 1.0.0\n"
-"Report-Msgid-Bugs-To: 'Guido Flohr <guido.flohr@cantanea.com>'\n"
+"Report-Msgid-Bugs-To: Guido Flohr <guido.flohr@cantanea.com>\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2020-03-29 22:31+0300\n"
 "Last-Translator: Guido Flohr <guido.flohr@cantanea.com>\n"
@@ -41,27 +41,33 @@ msgid ""
 msgstr "Номерата за следните области не са включени в номерата за {country}."
 
 #: ../_views/partials/body/chart-new.js:17
-#: ../_views/partials/body/chart-other.js:17
-#: ../_views/partials/body/table.html:18
+#: ../_views/partials/body/chart-other.js:25
+#: ../_views/partials/body/table.html:19
 msgid "%x"
 msgstr "%x"
 
-#: ../_views/partials/body/chart-other.js:22
-#: ../_views/partials/body/table.html:10
-msgid "Confirmed"
-msgstr "Потвърдена"
-
-#: ../_views/partials/body/chart-other.js:35
+#: ../_views/partials/body/chart-new.js:22
+#: ../_views/partials/body/chart-other.js:43
 #: ../_views/partials/body/table.html:11
 msgid "New Confirmed"
 msgstr "Ново потвърдено"
 
-#: ../_views/partials/body/chart-other.js:48
+#: ../_views/partials/body/chart-new.js:35
+msgid "7-day Average"
+msgstr "Средна стойнист миналите 7 дни"
+
+#: ../_views/partials/body/chart-other.js:30
+#: ../_views/partials/body/table.html:10
+msgid "Confirmed"
+msgstr "Потвърдена"
+
+#: ../_views/partials/body/chart-other.js:56
+#: ../_views/partials/body/table.html:12
 msgid "Recovered"
 msgstr "Оздравявани"
 
-#: ../_views/partials/body/chart-other.js:61
-#: ../_views/partials/body/table.html:12
+#: ../_views/partials/body/chart-other.js:69
+#: ../_views/partials/body/table.html:13
 msgid "Deaths"
 msgstr "Смъртни случаи"
 
@@ -209,1165 +215,1239 @@ msgstr "Босна и Херцеговина"
 
 #: ../_views/translate.txt:26
 msgctxt "country"
+msgid "Botswana"
+msgstr ""
+
+#: ../_views/translate.txt:27
+msgctxt "country"
 msgid "Brazil"
 msgstr "Бразилия"
 
-#: ../_views/translate.txt:27
+#: ../_views/translate.txt:28
 msgctxt "country"
 msgid "Brunei"
 msgstr "Бруней"
 
-#: ../_views/translate.txt:28
+#: ../_views/translate.txt:29
 msgctxt "country"
 msgid "Bulgaria"
 msgstr "България"
 
-#: ../_views/translate.txt:29
+#: ../_views/translate.txt:30
 msgctxt "country"
 msgid "Burkina Faso"
 msgstr "Буркина Фасо"
 
-#: ../_views/translate.txt:30
+#: ../_views/translate.txt:31
 msgctxt "country"
 msgid "Burma"
 msgstr "Бирма"
 
-#: ../_views/translate.txt:31
+#: ../_views/translate.txt:32
+msgctxt "country"
+msgid "Burundi"
+msgstr ""
+
+#: ../_views/translate.txt:33
 msgctxt "country"
 msgid "Cabo Verde"
 msgstr "Кабо Верде"
 
-#: ../_views/translate.txt:32
+#: ../_views/translate.txt:34
 msgctxt "country"
 msgid "Cambodia"
 msgstr "Камбоджа"
 
-#: ../_views/translate.txt:33
+#: ../_views/translate.txt:35
 msgctxt "country"
 msgid "Cameroon"
 msgstr "Камерун"
 
-#: ../_views/translate.txt:34
+#: ../_views/translate.txt:36
 msgctxt "country"
 msgid "Canada"
 msgstr "Канада"
 
-#: ../_views/translate.txt:35
+#: ../_views/translate.txt:37
 msgctxt "country"
 msgid "Central African Republic"
 msgstr "Централна Африканска република"
 
-#: ../_views/translate.txt:36
+#: ../_views/translate.txt:38
 msgctxt "country"
 msgid "Chad"
 msgstr "Чад"
 
-#: ../_views/translate.txt:37
+#: ../_views/translate.txt:39
 msgctxt "country"
 msgid "Chile"
 msgstr "Чили"
 
-#: ../_views/translate.txt:38
+#: ../_views/translate.txt:40
 msgctxt "country"
 msgid "China"
 msgstr "Китай"
 
-#: ../_views/translate.txt:39
+#: ../_views/translate.txt:41
 msgctxt "country"
 msgid "Colombia"
 msgstr "Колумбия"
 
-#: ../_views/translate.txt:40
+#: ../_views/translate.txt:42
+msgctxt "country"
+msgid "Comoros"
+msgstr ""
+
+#: ../_views/translate.txt:43
 msgctxt "country"
 msgid "Congo (Brazzaville)"
 msgstr "Конго (Бразавил)"
 
-#: ../_views/translate.txt:41
+#: ../_views/translate.txt:44
 msgctxt "country"
 msgid "Congo (Kinshasa)"
 msgstr "Конго (Киншаса)"
 
-#: ../_views/translate.txt:42
+#: ../_views/translate.txt:45
 msgctxt "country"
 msgid "Costa Rica"
 msgstr "Коста Рика"
 
-#: ../_views/translate.txt:43
+#: ../_views/translate.txt:46
 msgctxt "country"
 msgid "Cote d'Ivoire"
 msgstr "Кот д'Ивоар"
 
-#: ../_views/translate.txt:44
+#: ../_views/translate.txt:47
 msgctxt "country"
 msgid "Croatia"
 msgstr "Хърватия"
 
-#: ../_views/translate.txt:45
+#: ../_views/translate.txt:48
 msgctxt "country"
 msgid "Cuba"
 msgstr "Куба"
 
-#: ../_views/translate.txt:46
+#: ../_views/translate.txt:49
 msgctxt "country"
 msgid "Cyprus"
 msgstr "Кипър"
 
-#: ../_views/translate.txt:47
+#: ../_views/translate.txt:50
 msgctxt "country"
 msgid "Czechia"
 msgstr "Чехия"
 
-#: ../_views/translate.txt:48
+#: ../_views/translate.txt:51
 msgctxt "country"
 msgid "Denmark"
 msgstr "Дания"
 
-#: ../_views/translate.txt:49
+#: ../_views/translate.txt:52
 msgctxt "country"
 msgid "Diamond Princess"
 msgstr "Диамантена принцеса (Diamond Princess)"
 
-#: ../_views/translate.txt:50
+#: ../_views/translate.txt:53
 msgctxt "country"
 msgid "Djibouti"
 msgstr "Джибути"
 
-#: ../_views/translate.txt:51
+#: ../_views/translate.txt:54
 msgctxt "country"
 msgid "Dominica"
 msgstr "Доминика"
 
-#: ../_views/translate.txt:52
+#: ../_views/translate.txt:55
 msgctxt "country"
 msgid "Dominican Republic"
 msgstr "Доминиканска Република"
 
-#: ../_views/translate.txt:53
+#: ../_views/translate.txt:56
 msgctxt "country"
 msgid "Ecuador"
 msgstr "Еквадор"
 
-#: ../_views/translate.txt:54
+#: ../_views/translate.txt:57
 msgctxt "country"
 msgid "Egypt"
 msgstr "Египет"
 
-#: ../_views/translate.txt:55
+#: ../_views/translate.txt:58
 msgctxt "country"
 msgid "El Salvador"
 msgstr "Ел Салвадор"
 
-#: ../_views/translate.txt:56
+#: ../_views/translate.txt:59
 msgctxt "country"
 msgid "Equatorial Guinea"
 msgstr "Екваториална Гвинея"
 
-#: ../_views/translate.txt:57
+#: ../_views/translate.txt:60
 msgctxt "country"
 msgid "Eritrea"
 msgstr "Еритрея"
 
-#: ../_views/translate.txt:58
+#: ../_views/translate.txt:61
 msgctxt "country"
 msgid "Estonia"
 msgstr "Естония"
 
-#: ../_views/translate.txt:59
+#: ../_views/translate.txt:62
 msgctxt "country"
 msgid "Eswatini"
 msgstr "Есватини"
 
-#: ../_views/translate.txt:60
+#: ../_views/translate.txt:63
 msgctxt "country"
 msgid "Ethiopia"
 msgstr "Етиопия"
 
-#: ../_views/translate.txt:61
+#: ../_views/translate.txt:64
 msgctxt "country"
 msgid "Fiji"
 msgstr "Фиджи"
 
-#: ../_views/translate.txt:62
+#: ../_views/translate.txt:65
 msgctxt "country"
 msgid "Finland"
 msgstr "Финландия"
 
-#: ../_views/translate.txt:63
+#: ../_views/translate.txt:66
 msgctxt "country"
 msgid "France"
 msgstr "Франция"
 
-#: ../_views/translate.txt:64
+#: ../_views/translate.txt:67
 msgctxt "country"
 msgid "Gabon"
 msgstr "Габон"
 
-#: ../_views/translate.txt:65
+#: ../_views/translate.txt:68
 msgctxt "country"
 msgid "Gambia"
 msgstr "Гамбия"
 
-#: ../_views/translate.txt:66
+#: ../_views/translate.txt:69
 msgctxt "country"
 msgid "Georgia"
 msgstr "Джорджия"
 
-#: ../_views/translate.txt:67
+#: ../_views/translate.txt:70
 msgctxt "country"
 msgid "Germany"
 msgstr "Германия"
 
-#: ../_views/translate.txt:68
+#: ../_views/translate.txt:71
 msgctxt "country"
 msgid "Ghana"
 msgstr "Гана"
 
-#: ../_views/translate.txt:69
+#: ../_views/translate.txt:72
 msgctxt "country"
 msgid "Greece"
 msgstr "Гърция"
 
-#: ../_views/translate.txt:70
+#: ../_views/translate.txt:73
 msgctxt "country"
 msgid "Grenada"
 msgstr "Гренада"
 
-#: ../_views/translate.txt:71
+#: ../_views/translate.txt:74
 msgctxt "country"
 msgid "Guatemala"
 msgstr "Гватемала"
 
-#: ../_views/translate.txt:72
+#: ../_views/translate.txt:75
 msgctxt "country"
 msgid "Guinea"
 msgstr "Гвинея"
 
-#: ../_views/translate.txt:73
+#: ../_views/translate.txt:76
 msgctxt "country"
 msgid "Guinea-Bissau"
 msgstr "Гвинея-Бисау"
 
-#: ../_views/translate.txt:74
+#: ../_views/translate.txt:77
 msgctxt "country"
 msgid "Guyana"
 msgstr "Гвиана"
 
-#: ../_views/translate.txt:75
+#: ../_views/translate.txt:78
 msgctxt "country"
 msgid "Haiti"
 msgstr "Хаити"
 
-#: ../_views/translate.txt:76
+#: ../_views/translate.txt:79
 msgctxt "country"
 msgid "Holy See"
 msgstr "Свети престол"
 
-#: ../_views/translate.txt:77
+#: ../_views/translate.txt:80
 msgctxt "country"
 msgid "Honduras"
 msgstr "Хондурас"
 
-#: ../_views/translate.txt:78
+#: ../_views/translate.txt:81
 msgctxt "country"
 msgid "Hungary"
 msgstr "Унгария"
 
-#: ../_views/translate.txt:79
+#: ../_views/translate.txt:82
 msgctxt "country"
 msgid "Iceland"
 msgstr "Исландия"
 
-#: ../_views/translate.txt:80
+#: ../_views/translate.txt:83
 msgctxt "country"
 msgid "India"
 msgstr "Индия"
 
-#: ../_views/translate.txt:81
+#: ../_views/translate.txt:84
 msgctxt "country"
 msgid "Indonesia"
 msgstr "Индонезия"
 
-#: ../_views/translate.txt:82
+#: ../_views/translate.txt:85
 msgctxt "country"
 msgid "Iran"
 msgstr "Иран"
 
-#: ../_views/translate.txt:83
+#: ../_views/translate.txt:86
 msgctxt "country"
 msgid "Iraq"
 msgstr "Ирак"
 
-#: ../_views/translate.txt:84
+#: ../_views/translate.txt:87
 msgctxt "country"
 msgid "Ireland"
 msgstr "Ирландия"
 
-#: ../_views/translate.txt:85
+#: ../_views/translate.txt:88
 msgctxt "country"
 msgid "Israel"
 msgstr "Израел"
 
-#: ../_views/translate.txt:86
+#: ../_views/translate.txt:89
 msgctxt "country"
 msgid "Italy"
 msgstr "Италия"
 
-#: ../_views/translate.txt:87
+#: ../_views/translate.txt:90
 msgctxt "country"
 msgid "Jamaica"
 msgstr "Ямайка"
 
-#: ../_views/translate.txt:88
+#: ../_views/translate.txt:91
 msgctxt "country"
 msgid "Japan"
 msgstr "Япония"
 
-#: ../_views/translate.txt:89
+#: ../_views/translate.txt:92
 msgctxt "country"
 msgid "Jordan"
 msgstr "Йордания"
 
-#: ../_views/translate.txt:90
+#: ../_views/translate.txt:93
 msgctxt "country"
 msgid "Kazakhstan"
 msgstr "Казахстан"
 
-#: ../_views/translate.txt:91
+#: ../_views/translate.txt:94
 msgctxt "country"
 msgid "Kenya"
 msgstr "Кения"
 
-#: ../_views/translate.txt:92
+#: ../_views/translate.txt:95
 msgctxt "country"
 msgid "Korea, South"
 msgstr "Южна Корея"
 
-#: ../_views/translate.txt:93
+#: ../_views/translate.txt:96
 msgctxt "country"
 msgid "Kosovo"
 msgstr "Косово"
 
-#: ../_views/translate.txt:94
+#: ../_views/translate.txt:97
 msgctxt "country"
 msgid "Kuwait"
 msgstr "Кувейт"
 
-#: ../_views/translate.txt:95
+#: ../_views/translate.txt:98
 msgctxt "country"
 msgid "Kyrgyzstan"
 msgstr "Киргизстан"
 
-#: ../_views/translate.txt:96
+#: ../_views/translate.txt:99
 msgctxt "country"
 msgid "Laos"
 msgstr "Лаос"
 
-#: ../_views/translate.txt:97
+#: ../_views/translate.txt:100
 msgctxt "country"
 msgid "Latvia"
 msgstr "Латвия"
 
-#: ../_views/translate.txt:98
+#: ../_views/translate.txt:101
 msgctxt "country"
 msgid "Lebanon"
 msgstr "Ливан"
 
-#: ../_views/translate.txt:99
+#: ../_views/translate.txt:102
+msgctxt "country"
+msgid "Lesotho"
+msgstr ""
+
+#: ../_views/translate.txt:103
 msgctxt "country"
 msgid "Liberia"
 msgstr "Либерия"
 
-#: ../_views/translate.txt:100
+#: ../_views/translate.txt:104
 msgctxt "country"
 msgid "Libya"
 msgstr "Либия"
 
-#: ../_views/translate.txt:101
+#: ../_views/translate.txt:105
 msgctxt "country"
 msgid "Liechtenstein"
 msgstr "Лихтенщайн"
 
-#: ../_views/translate.txt:102
+#: ../_views/translate.txt:106
 msgctxt "country"
 msgid "Lithuania"
 msgstr "Литва"
 
-#: ../_views/translate.txt:103
+#: ../_views/translate.txt:107
 msgctxt "country"
 msgid "Luxembourg"
 msgstr "Люксембург"
 
-#: ../_views/translate.txt:104
+#: ../_views/translate.txt:108
 msgctxt "country"
 msgid "MS Zaandam"
 msgstr "МС Заандам (MS Zaandam)"
 
-#: ../_views/translate.txt:105
+#: ../_views/translate.txt:109
 msgctxt "country"
 msgid "Madagascar"
 msgstr "Мадагаскар"
 
-#: ../_views/translate.txt:106
+#: ../_views/translate.txt:110
+#, fuzzy
+msgctxt "country"
+msgid "Malawi"
+msgstr "Малайзия"
+
+#: ../_views/translate.txt:111
 msgctxt "country"
 msgid "Malaysia"
 msgstr "Малайзия"
 
-#: ../_views/translate.txt:107
+#: ../_views/translate.txt:112
 msgctxt "country"
 msgid "Maldives"
 msgstr "Малдиви"
 
-#: ../_views/translate.txt:108
+#: ../_views/translate.txt:113
 msgctxt "country"
 msgid "Mali"
 msgstr "Мали"
 
-#: ../_views/translate.txt:109
+#: ../_views/translate.txt:114
 msgctxt "country"
 msgid "Malta"
 msgstr "Малта"
 
-#: ../_views/translate.txt:110
+#: ../_views/translate.txt:115
 msgctxt "country"
 msgid "Mauritania"
 msgstr "Мавритания"
 
-#: ../_views/translate.txt:111
+#: ../_views/translate.txt:116
 msgctxt "country"
 msgid "Mauritius"
 msgstr "Мавриций"
 
-#: ../_views/translate.txt:112
+#: ../_views/translate.txt:117
 msgctxt "country"
 msgid "Mexico"
 msgstr "Мексико"
 
-#: ../_views/translate.txt:113
+#: ../_views/translate.txt:118
 msgctxt "country"
 msgid "Moldova"
 msgstr "Молдова"
 
-#: ../_views/translate.txt:114
+#: ../_views/translate.txt:119
 msgctxt "country"
 msgid "Monaco"
 msgstr "Монако"
 
-#: ../_views/translate.txt:115
+#: ../_views/translate.txt:120
 msgctxt "country"
 msgid "Mongolia"
 msgstr "Монголия"
 
-#: ../_views/translate.txt:116
+#: ../_views/translate.txt:121
 msgctxt "country"
 msgid "Montenegro"
 msgstr "Черна гора"
 
-#: ../_views/translate.txt:117
+#: ../_views/translate.txt:122
 msgctxt "country"
 msgid "Morocco"
 msgstr "Мароко"
 
-#: ../_views/translate.txt:118
+#: ../_views/translate.txt:123
 msgctxt "country"
 msgid "Mozambique"
 msgstr "Мозамбик"
 
-#: ../_views/translate.txt:119
+#: ../_views/translate.txt:124
 msgctxt "country"
 msgid "Namibia"
 msgstr "Намибия"
 
-#: ../_views/translate.txt:120
+#: ../_views/translate.txt:125
 msgctxt "country"
 msgid "Nepal"
 msgstr "Непал"
 
-#: ../_views/translate.txt:121
+#: ../_views/translate.txt:126
 msgctxt "country"
 msgid "Netherlands"
 msgstr "Холандия"
 
-#: ../_views/translate.txt:122
+#: ../_views/translate.txt:127
 msgctxt "country"
 msgid "New Zealand"
 msgstr "Нова Зеландия"
 
-#: ../_views/translate.txt:123
+#: ../_views/translate.txt:128
 msgctxt "country"
 msgid "Nicaragua"
 msgstr "Никарагуа"
 
-#: ../_views/translate.txt:124
+#: ../_views/translate.txt:129
 msgctxt "country"
 msgid "Niger"
 msgstr "Нигер"
 
-#: ../_views/translate.txt:125
+#: ../_views/translate.txt:130
 msgctxt "country"
 msgid "Nigeria"
 msgstr "Нигерия"
 
-#: ../_views/translate.txt:126
+#: ../_views/translate.txt:131
 msgctxt "country"
 msgid "North Macedonia"
 msgstr "Северна Македония"
 
-#: ../_views/translate.txt:127
+#: ../_views/translate.txt:132
 msgctxt "country"
 msgid "Norway"
 msgstr "Норвегия"
 
-#: ../_views/translate.txt:128
+#: ../_views/translate.txt:133
 msgctxt "country"
 msgid "Oman"
 msgstr "Оман"
 
-#: ../_views/translate.txt:129
+#: ../_views/translate.txt:134
 msgctxt "country"
 msgid "Pakistan"
 msgstr "Пакистан"
 
-#: ../_views/translate.txt:130
+#: ../_views/translate.txt:135
 msgctxt "country"
 msgid "Panama"
 msgstr "Панама"
 
-#: ../_views/translate.txt:131
+#: ../_views/translate.txt:136
 msgctxt "country"
 msgid "Papua New Guinea"
 msgstr "Папуа-Нова Гвинея"
 
-#: ../_views/translate.txt:132
+#: ../_views/translate.txt:137
 msgctxt "country"
 msgid "Paraguay"
 msgstr "Парагвай"
 
-#: ../_views/translate.txt:133
+#: ../_views/translate.txt:138
 msgctxt "country"
 msgid "Peru"
 msgstr "Перу"
 
-#: ../_views/translate.txt:134
+#: ../_views/translate.txt:139
 msgctxt "country"
 msgid "Philippines"
 msgstr "Филипини"
 
-#: ../_views/translate.txt:135
+#: ../_views/translate.txt:140
 msgctxt "country"
 msgid "Poland"
 msgstr "Полша"
 
-#: ../_views/translate.txt:136
+#: ../_views/translate.txt:141
 msgctxt "country"
 msgid "Portugal"
 msgstr "Португалия"
 
-#: ../_views/translate.txt:137
+#: ../_views/translate.txt:142
 msgctxt "country"
 msgid "Qatar"
 msgstr "Катар"
 
-#: ../_views/translate.txt:138
+#: ../_views/translate.txt:143
 msgctxt "country"
 msgid "Romania"
 msgstr "Румъния"
 
-#: ../_views/translate.txt:139
+#: ../_views/translate.txt:144
 msgctxt "country"
 msgid "Russia"
 msgstr "Руссия"
 
-#: ../_views/translate.txt:140
+#: ../_views/translate.txt:145
 msgctxt "country"
 msgid "Rwanda"
 msgstr "Руанда"
 
-#: ../_views/translate.txt:141
+#: ../_views/translate.txt:146
 msgctxt "country"
 msgid "Saint Kitts and Nevis"
 msgstr "Сейнт Кристофър и Нейвис"
 
-#: ../_views/translate.txt:142
+#: ../_views/translate.txt:147
 msgctxt "country"
 msgid "Saint Lucia"
 msgstr "Санта Лучия"
 
-#: ../_views/translate.txt:143
+#: ../_views/translate.txt:148
 msgctxt "country"
 msgid "Saint Vincent and the Grenadines"
 msgstr "Сейнт Винсент и Гренадини"
 
-#: ../_views/translate.txt:144
+#: ../_views/translate.txt:149
 msgctxt "country"
 msgid "San Marino"
 msgstr "Сан Марино"
 
-#: ../_views/translate.txt:145
+#: ../_views/translate.txt:150
+msgctxt "country"
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: ../_views/translate.txt:151
 msgctxt "country"
 msgid "Saudi Arabia"
 msgstr "Саудитска Арабия"
 
-#: ../_views/translate.txt:146
+#: ../_views/translate.txt:152
 msgctxt "country"
 msgid "Senegal"
 msgstr "Сенегал"
 
-#: ../_views/translate.txt:147
+#: ../_views/translate.txt:153
 msgctxt "country"
 msgid "Serbia"
 msgstr "Сърбия"
 
-#: ../_views/translate.txt:148
+#: ../_views/translate.txt:154
 msgctxt "country"
 msgid "Seychelles"
 msgstr "Сейшелски острови"
 
-#: ../_views/translate.txt:149
+#: ../_views/translate.txt:155
+msgctxt "country"
+msgid "Sierra Leone"
+msgstr ""
+
+#: ../_views/translate.txt:156
 msgctxt "country"
 msgid "Singapore"
 msgstr "Сингапур"
 
-#: ../_views/translate.txt:150
+#: ../_views/translate.txt:157
 msgctxt "country"
 msgid "Slovakia"
 msgstr "Словакия"
 
-#: ../_views/translate.txt:151
+#: ../_views/translate.txt:158
 msgctxt "country"
 msgid "Slovenia"
 msgstr "Словения"
 
-#: ../_views/translate.txt:152
+#: ../_views/translate.txt:159
 msgctxt "country"
 msgid "Somalia"
 msgstr "Сомалия"
 
-#: ../_views/translate.txt:153
+#: ../_views/translate.txt:160
 msgctxt "country"
 msgid "South Africa"
 msgstr "Република Южна Африка"
 
-#: ../_views/translate.txt:154
+#: ../_views/translate.txt:161
+#, fuzzy
+msgctxt "country"
+msgid "South Sudan"
+msgstr "Судан"
+
+#: ../_views/translate.txt:162
 msgctxt "country"
 msgid "Spain"
 msgstr "Испания"
 
-#: ../_views/translate.txt:155
+#: ../_views/translate.txt:163
 msgctxt "country"
 msgid "Sri Lanka"
 msgstr "Шри Ланка"
 
-#: ../_views/translate.txt:156
+#: ../_views/translate.txt:164
 msgctxt "country"
 msgid "Sudan"
 msgstr "Судан"
 
-#: ../_views/translate.txt:157
+#: ../_views/translate.txt:165
 msgctxt "country"
 msgid "Suriname"
 msgstr "Суринам"
 
-#: ../_views/translate.txt:158
+#: ../_views/translate.txt:166
 msgctxt "country"
 msgid "Sweden"
 msgstr "Швеция"
 
-#: ../_views/translate.txt:159
+#: ../_views/translate.txt:167
 msgctxt "country"
 msgid "Switzerland"
 msgstr "Швейцария"
 
-#: ../_views/translate.txt:160
+#: ../_views/translate.txt:168
 msgctxt "country"
 msgid "Syria"
 msgstr "Сирия"
 
-#: ../_views/translate.txt:161
+#: ../_views/translate.txt:169
 msgctxt "country"
 msgid "Taiwan"
 msgstr "Тайван"
 
-#: ../_views/translate.txt:162
+#: ../_views/translate.txt:170
+#, fuzzy
+msgctxt "country"
+msgid "Tajikistan"
+msgstr "Пакистан"
+
+#: ../_views/translate.txt:171
 msgctxt "country"
 msgid "Tanzania"
 msgstr "Танзания"
 
-#: ../_views/translate.txt:163
+#: ../_views/translate.txt:172
 msgctxt "country"
 msgid "Thailand"
 msgstr "Тайланд"
 
-#: ../_views/translate.txt:164
+#: ../_views/translate.txt:173
 msgctxt "country"
 msgid "Timor-Leste"
 msgstr "Тимор-Лесте"
 
-#: ../_views/translate.txt:165
+#: ../_views/translate.txt:174
 msgctxt "country"
 msgid "Togo"
 msgstr "Того"
 
-#: ../_views/translate.txt:166
+#: ../_views/translate.txt:175
 msgctxt "country"
 msgid "Trinidad and Tobago"
 msgstr "Тринидад и Тобаго"
 
-#: ../_views/translate.txt:167
+#: ../_views/translate.txt:176
 msgctxt "country"
 msgid "Tunisia"
 msgstr "Тунис"
 
-#: ../_views/translate.txt:168
+#: ../_views/translate.txt:177
 msgctxt "country"
 msgid "Turkey"
 msgstr "Турция"
 
-#: ../_views/translate.txt:169
+#: ../_views/translate.txt:178
 msgctxt "country"
 msgid "US"
 msgstr "САЩ"
 
-#: ../_views/translate.txt:170
+#: ../_views/translate.txt:179
 msgctxt "country"
 msgid "Uganda"
 msgstr "Уганда"
 
-#: ../_views/translate.txt:171
+#: ../_views/translate.txt:180
 msgctxt "country"
 msgid "Ukraine"
 msgstr "Украйна"
 
-#: ../_views/translate.txt:172
+#: ../_views/translate.txt:181
 msgctxt "country"
 msgid "United Arab Emirates"
 msgstr "Обединени Арабски Емирства"
 
-#: ../_views/translate.txt:173
+#: ../_views/translate.txt:182
 msgctxt "country"
 msgid "United Kingdom"
 msgstr "Обединеното Kралство"
 
-#: ../_views/translate.txt:174
+#: ../_views/translate.txt:183
 msgctxt "country"
 msgid "Uruguay"
 msgstr "Уругвай"
 
-#: ../_views/translate.txt:175
+#: ../_views/translate.txt:184
 msgctxt "country"
 msgid "Uzbekistan"
 msgstr "Узбекистан"
 
-#: ../_views/translate.txt:176
+#: ../_views/translate.txt:185
 msgctxt "country"
 msgid "Venezuela"
 msgstr "Венецуела"
 
-#: ../_views/translate.txt:177
+#: ../_views/translate.txt:186
 msgctxt "country"
 msgid "Vietnam"
 msgstr "Виетнам"
 
-#: ../_views/translate.txt:178
+#: ../_views/translate.txt:187
 msgctxt "country"
 msgid "West Bank and Gaza"
 msgstr "Западен бряг и Газа"
 
-#: ../_views/translate.txt:179
+#: ../_views/translate.txt:188
+#, fuzzy
+msgctxt "country"
+msgid "Western Sahara"
+msgstr "Западна Австралия"
+
+#: ../_views/translate.txt:189
+msgctxt "country"
+msgid "Yemen"
+msgstr ""
+
+#: ../_views/translate.txt:190
 msgctxt "country"
 msgid "Zambia"
 msgstr "Замбия"
 
-#: ../_views/translate.txt:180
+#: ../_views/translate.txt:191
 msgctxt "country"
 msgid "Zimbabwe"
 msgstr "Зимбабве"
 
-#: ../_views/translate.txt:181
+#: ../_views/translate.txt:192
 msgctxt "province"
 msgid "Alberta"
 msgstr "Алберта"
 
-#: ../_views/translate.txt:182
+#: ../_views/translate.txt:193
 msgctxt "province"
 msgid "Anguilla"
 msgstr "Ангуила"
 
-#: ../_views/translate.txt:183
+#: ../_views/translate.txt:194
 msgctxt "province"
 msgid "Anhui"
 msgstr "Анхууй"
 
-#: ../_views/translate.txt:184
+#: ../_views/translate.txt:195
 msgctxt "province"
 msgid "Aruba"
 msgstr "Аруба"
 
-#: ../_views/translate.txt:185
+#: ../_views/translate.txt:196
 msgctxt "province"
 msgid "Australian Capital Territory"
 msgstr "Австралийска столична територия"
 
-#: ../_views/translate.txt:186
+#: ../_views/translate.txt:197
 msgctxt "province"
 msgid "Beijing"
 msgstr "Пекин"
 
-#: ../_views/translate.txt:187
+#: ../_views/translate.txt:198
 msgctxt "province"
 msgid "Bermuda"
 msgstr "Бермудски острови"
 
-#: ../_views/translate.txt:188
+#: ../_views/translate.txt:199
+msgctxt "province"
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr ""
+
+#: ../_views/translate.txt:200
 msgctxt "province"
 msgid "British Columbia"
 msgstr "Британска Колумбия"
 
-#: ../_views/translate.txt:189
+#: ../_views/translate.txt:201
 msgctxt "province"
 msgid "British Virgin Islands"
 msgstr "Британски Вирджински острови"
 
-#: ../_views/translate.txt:190
+#: ../_views/translate.txt:202
 msgctxt "province"
 msgid "Cayman Islands"
 msgstr "Кайманови острови"
 
-#: ../_views/translate.txt:191
+#: ../_views/translate.txt:203
 msgctxt "province"
 msgid "Channel Islands"
 msgstr "Нормандски острови"
 
-#: ../_views/translate.txt:192
+#: ../_views/translate.txt:204
 msgctxt "province"
 msgid "Chongqing"
 msgstr "Чунцин"
 
-#: ../_views/translate.txt:193
+#: ../_views/translate.txt:205
 msgctxt "province"
 msgid "Curacao"
 msgstr "Кюрасао"
 
-#: ../_views/translate.txt:194
+#: ../_views/translate.txt:206
 msgctxt "province"
 msgid "Diamond Princess"
 msgstr "Диамантена принцеса (Diamond Princess)"
 
-#: ../_views/translate.txt:195
+#: ../_views/translate.txt:207
+msgctxt "province"
+msgid "Falkland Islands (Malvinas)"
+msgstr ""
+
+#: ../_views/translate.txt:208
 msgctxt "province"
 msgid "Faroe Islands"
 msgstr "Фарьорските острови"
 
-#: ../_views/translate.txt:196
+#: ../_views/translate.txt:209
 msgctxt "province"
 msgid "French Guiana"
 msgstr "Френска Гвиана"
 
-#: ../_views/translate.txt:197
+#: ../_views/translate.txt:210
 msgctxt "province"
 msgid "French Polynesia"
 msgstr "Френска Полинезия"
 
-#: ../_views/translate.txt:198
+#: ../_views/translate.txt:211
 msgctxt "province"
 msgid "Fujian"
 msgstr "Фуджиан"
 
-#: ../_views/translate.txt:199
+#: ../_views/translate.txt:212
 msgctxt "province"
 msgid "Gansu"
 msgstr "Гансу"
 
-#: ../_views/translate.txt:200
+#: ../_views/translate.txt:213
 msgctxt "province"
 msgid "Gibraltar"
 msgstr "Гибралтар"
 
-#: ../_views/translate.txt:201
+#: ../_views/translate.txt:214
 msgctxt "province"
 msgid "Grand Princess"
 msgstr "Гранд принцеса (Grand Princess)"
 
-#: ../_views/translate.txt:202
+#: ../_views/translate.txt:215
 msgctxt "province"
 msgid "Greenland"
 msgstr "Гренландия"
 
-#: ../_views/translate.txt:203
+#: ../_views/translate.txt:216
 msgctxt "province"
 msgid "Guadeloupe"
 msgstr "Гваделупе"
 
-#: ../_views/translate.txt:204
+#: ../_views/translate.txt:217
 msgctxt "province"
 msgid "Guangdong"
 msgstr "Гуангдонг"
 
-#: ../_views/translate.txt:205
+#: ../_views/translate.txt:218
 msgctxt "province"
 msgid "Guangxi"
 msgstr "Гуанси"
 
-#: ../_views/translate.txt:206
+#: ../_views/translate.txt:219
 msgctxt "province"
 msgid "Guizhou"
 msgstr "Гуейджоу"
 
-#: ../_views/translate.txt:207
+#: ../_views/translate.txt:220
 msgctxt "province"
 msgid "Hainan"
 msgstr "Хайнан"
 
-#: ../_views/translate.txt:208
+#: ../_views/translate.txt:221
 msgctxt "province"
 msgid "Hebei"
 msgstr "Хъбей"
 
-#: ../_views/translate.txt:209
+#: ../_views/translate.txt:222
 msgctxt "province"
 msgid "Heilongjiang"
 msgstr "Хайлонгдзян"
 
-#: ../_views/translate.txt:210
+#: ../_views/translate.txt:223
 msgctxt "province"
 msgid "Henan"
 msgstr "Хенан"
 
-#: ../_views/translate.txt:211
+#: ../_views/translate.txt:224
 msgctxt "province"
 msgid "Hong Kong"
 msgstr "Хонконг"
 
-#: ../_views/translate.txt:212
+#: ../_views/translate.txt:225
 msgctxt "province"
 msgid "Hubei"
 msgstr "Хубей"
 
-#: ../_views/translate.txt:213
+#: ../_views/translate.txt:226
 msgctxt "province"
 msgid "Hunan"
 msgstr "Хунан"
 
-#: ../_views/translate.txt:214
+#: ../_views/translate.txt:227
 msgctxt "province"
 msgid "Inner Mongolia"
 msgstr "Вътрешна Монголия"
 
-#: ../_views/translate.txt:215
+#: ../_views/translate.txt:228
 msgctxt "province"
 msgid "Isle of Man"
 msgstr "Остров Ман"
 
-#: ../_views/translate.txt:216
+#: ../_views/translate.txt:229
 msgctxt "province"
 msgid "Jiangsu"
 msgstr "Jiangsu"
 
-#: ../_views/translate.txt:217
+#: ../_views/translate.txt:230
 msgctxt "province"
 msgid "Jiangxi"
 msgstr "Дзянси"
 
-#: ../_views/translate.txt:218
+#: ../_views/translate.txt:231
 msgctxt "province"
 msgid "Jilin"
 msgstr "Дзилин"
 
-#: ../_views/translate.txt:219
+#: ../_views/translate.txt:232
 msgctxt "province"
 msgid "Liaoning"
 msgstr "Лионаинг"
 
-#: ../_views/translate.txt:220
+#: ../_views/translate.txt:233
 msgctxt "province"
 msgid "Macau"
 msgstr "Макао"
 
-#: ../_views/translate.txt:221
+#: ../_views/translate.txt:234
 msgctxt "province"
 msgid "Manitoba"
 msgstr "Манитоба"
 
-#: ../_views/translate.txt:222
+#: ../_views/translate.txt:235
 msgctxt "province"
 msgid "Martinique"
 msgstr "Мартиника"
 
-#: ../_views/translate.txt:223
+#: ../_views/translate.txt:236
 msgctxt "province"
 msgid "Mayotte"
 msgstr "Майот"
 
-#: ../_views/translate.txt:224
+#: ../_views/translate.txt:237
 msgctxt "province"
 msgid "Montserrat"
 msgstr "Монсерат"
 
-#: ../_views/translate.txt:225
+#: ../_views/translate.txt:238
 msgctxt "province"
 msgid "New Brunswick"
 msgstr "Ню Брънзуик"
 
-#: ../_views/translate.txt:226
+#: ../_views/translate.txt:239
 msgctxt "province"
 msgid "New Caledonia"
 msgstr "Нова Каледония"
 
-#: ../_views/translate.txt:227
+#: ../_views/translate.txt:240
 msgctxt "province"
 msgid "New South Wales"
 msgstr "Нов Южен Уелс"
 
-#: ../_views/translate.txt:228
+#: ../_views/translate.txt:241
 msgctxt "province"
 msgid "Newfoundland and Labrador"
 msgstr "Нюфаундленд и Лабрадор"
 
-#: ../_views/translate.txt:229
+#: ../_views/translate.txt:242
 msgctxt "province"
 msgid "Ningxia"
 msgstr "Нинся"
 
-#: ../_views/translate.txt:230
+#: ../_views/translate.txt:243
 msgctxt "province"
 msgid "Northern Territory"
 msgstr "Северна територия"
 
-#: ../_views/translate.txt:231
+#: ../_views/translate.txt:244
 msgctxt "province"
 msgid "Northwest Territories"
 msgstr "Северозападни територии"
 
-#: ../_views/translate.txt:232
+#: ../_views/translate.txt:245
 msgctxt "province"
 msgid "Nova Scotia"
 msgstr "Нова Скотия"
 
-#: ../_views/translate.txt:233
+#: ../_views/translate.txt:246
 msgctxt "province"
 msgid "Ontario"
 msgstr "Онтарио"
 
-#: ../_views/translate.txt:234
+#: ../_views/translate.txt:247
 msgctxt "province"
 msgid "Prince Edward Island"
 msgstr "Остров Принц Едуард"
 
-#: ../_views/translate.txt:235
+#: ../_views/translate.txt:248
 msgctxt "province"
 msgid "Qinghai"
 msgstr "Цинхай"
 
-#: ../_views/translate.txt:236
+#: ../_views/translate.txt:249
 msgctxt "province"
 msgid "Quebec"
 msgstr "Квебек"
 
-#: ../_views/translate.txt:237
+#: ../_views/translate.txt:250
 msgctxt "province"
 msgid "Queensland"
 msgstr "Куийнсленд"
 
-#: ../_views/translate.txt:238
+#: ../_views/translate.txt:251
 msgctxt "province"
 msgid "Reunion"
 msgstr "Реюнион"
 
-#: ../_views/translate.txt:239
+#: ../_views/translate.txt:252
 msgctxt "province"
 msgid "Saint Barthelemy"
 msgstr "Сейнт Бартелми"
 
-#: ../_views/translate.txt:240
+#: ../_views/translate.txt:253
+msgctxt "province"
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: ../_views/translate.txt:254
 msgctxt "province"
 msgid "Saskatchewan"
 msgstr "Саскачеван"
 
-#: ../_views/translate.txt:241
+#: ../_views/translate.txt:255
 msgctxt "province"
 msgid "Shaanxi"
 msgstr "Шанси"
 
-#: ../_views/translate.txt:242
+#: ../_views/translate.txt:256
 msgctxt "province"
 msgid "Shandong"
 msgstr "Шандонг"
 
-#: ../_views/translate.txt:243
+#: ../_views/translate.txt:257
 msgctxt "province"
 msgid "Shanghai"
 msgstr "Шанхай"
 
-#: ../_views/translate.txt:244
+#: ../_views/translate.txt:258
 msgctxt "province"
 msgid "Shanxi"
 msgstr "Шанси"
 
-#: ../_views/translate.txt:245
+#: ../_views/translate.txt:259
 msgctxt "province"
 msgid "Sichuan"
 msgstr "Съчуан"
 
-#: ../_views/translate.txt:246
+#: ../_views/translate.txt:260
 msgctxt "province"
 msgid "Sint Maarten"
 msgstr "Синт Маартен"
 
-#: ../_views/translate.txt:247
+#: ../_views/translate.txt:261
 msgctxt "province"
 msgid "South Australia"
 msgstr "Южна Австралия"
 
-#: ../_views/translate.txt:248
+#: ../_views/translate.txt:262
 msgctxt "province"
 msgid "St Martin"
 msgstr "Свети Мартин"
 
-#: ../_views/translate.txt:249
+#: ../_views/translate.txt:263
 msgctxt "province"
 msgid "Tasmania"
 msgstr "Тасмания"
 
-#: ../_views/translate.txt:250
+#: ../_views/translate.txt:264
 msgctxt "province"
 msgid "Tianjin"
 msgstr "Тянжин"
 
-#: ../_views/translate.txt:251
+#: ../_views/translate.txt:265
 msgctxt "province"
 msgid "Tibet"
 msgstr "Тибет"
 
-#: ../_views/translate.txt:252
+#: ../_views/translate.txt:266
 msgctxt "province"
 msgid "Turks and Caicos Islands"
 msgstr "Търкс и Кайкос острови"
 
-#: ../_views/translate.txt:253
+#: ../_views/translate.txt:267
 msgctxt "province"
 msgid "Victoria"
 msgstr "Виктория"
 
-#: ../_views/translate.txt:254
+#: ../_views/translate.txt:268
 msgctxt "province"
 msgid "Western Australia"
 msgstr "Западна Австралия"
 
-#: ../_views/translate.txt:255
+#: ../_views/translate.txt:269
 msgctxt "province"
 msgid "Xinjiang"
 msgstr "Синцзян"
 
-#: ../_views/translate.txt:256
+#: ../_views/translate.txt:270
 msgctxt "province"
 msgid "Yukon"
 msgstr "Юкон"
 
-#: ../_views/translate.txt:257
+#: ../_views/translate.txt:271
 msgctxt "province"
 msgid "Yunnan"
 msgstr "Юнан"
 
-#: ../_views/translate.txt:258
+#: ../_views/translate.txt:272
 msgctxt "province"
 msgid "Zhejiang"
 msgstr "Zhejiang"

@@ -2,7 +2,7 @@
 # to Makefile syntax!
 
 # Space-separated list of language codes.  Omit the base language!
-LINGUAS = de
+LINGUAS = de bg
 
 # Textdomain of the site, for example reverse domain name.
 TEXTDOMAIN = corona-numbers
