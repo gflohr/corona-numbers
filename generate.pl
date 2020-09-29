@@ -236,7 +236,7 @@ sub write_province {
 
 		shift @last_week if @last_week > 7;
 
-		$set->{new7} = sum(@last_week) / scalar @last_week;
+		$set->{new7} = int(0.5 + sum(@last_week) / scalar @last_week);
 	}
 
 	$stash{data} = \@data;

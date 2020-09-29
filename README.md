@@ -2,6 +2,10 @@
 
 Yet another site displaying data for the spread of Sars Covid 2.
 
+You can see an automatically updated live example at:
+
+   https://corona.cantanea.com/
+
 ## State
 
 Not yet ready but basically working.
