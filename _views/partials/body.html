@@ -27,6 +27,9 @@
 								[% END %]
 							[% END %]
 						</ol>
+						[% IF asset.population %]
+						<h4>[% gtx.xgettext('Population: {population}', population => asset.population) %]</h4>
+						[% END %]
 					</nav>
 				</div>
 				[% INCLUDE "partials/body/charts.html" %]
@@ -48,5 +51,8 @@
 		</script>
 		<script>
 			[% INCLUDE "partials/body/chart-other.js" %]
+		</script>
+		<script>
+			[% INCLUDE "partials/body/chart-incidence.js" %]
 		</script>
 	</body>

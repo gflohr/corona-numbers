@@ -16,6 +16,7 @@ use List::Util qw(sum);
 
 sub read_data;
 sub read_data_file;
+sub read_population_data;
 sub write_country;
 sub write_province;
 sub write_file;
@@ -40,14 +41,13 @@ my %split;
 my %pot_countries;
 my %pot_provinces;
 
-use Data::Dumper;
-die Dumper [all_country_names()];
-
+my %population = read_population_data;
 my %data = map { $_ => read_data_file $_} @types;
 
 my %ignore = map { $_ => 1 } (
 	'Diamond Princess',
-	'MS Zaandam'
+	'MS Zaandam',
+	'Repatriated Travellers',
 );
 
 my %special = (
@@ -59,7 +59,6 @@ my %special = (
 foreach my $type (keys %data) {
 	foreach my $country (keys %{$data{$type}}) {
 		next if $ignore{$country};
-		country_code $country or die "No code for '$country'";
 		foreach my $province (keys %{$data{$type}->{$country}}) {
 			$countries{$country}->{$province}->{$type} = $data{$type}->{$country}->{$province};
 		}
@@ -85,6 +84,32 @@ foreach my $country (keys %countries) {
 
 write_pot;
 write_search;
+
+sub read_population_data {
+	my %years;
+	my %population;
+
+	my $filename = "$wd/population/data/population.csv";
+
+	my $csv = Text::CSV->new({ binary => 1, auto_diag => 1 });
+	open my $fh, '<:encoding(utf8)', $filename or die "filename: $!";
+	my $first_row = $csv->getline($fh);
+	die "$filename: huh???" if $first_row->[0] ne 'Country Name';
+	die "$filename: huh???" if $first_row->[1] ne 'Country Code';
+	die "$filename: huh???" if $first_row->[2] ne 'Year';
+	die "$filename: huh???" if $first_row->[3] ne 'Value';
+
+	while (my $row = $csv->getline ($fh)) {
+		my ($name, $code, $year, $value) = @$row;
+		if ($year > $years{$code}) {
+			$years{$code} = $year;
+			$population{$code} = 0 + $value;
+		}
+	}
+	close $fh;
+
+	return %population;
+}
 
 sub read_data_file {
 	my ($type) = @_;
@@ -217,6 +242,13 @@ sub write_province {
 	);
 	$stash{province} = $province if $province ne '_total';
 	$stash{fprovince} = $fprovince if $province ne '_total';
+	
+	if ($province eq '_total') {
+		my $code = country_code $country;
+		if ($code && exists $population{$code}) {
+			$stash{population} = $population{$code};
+		}
+	}
 
 	my @areas = grep { $_ ne '_total' } keys %{$countries{$country}};
 	my $area_context;
@@ -245,16 +277,30 @@ sub write_province {
 	}
 
 	my $confirmed = 0;
+	my $last_deaths = 0;
 	my @last_week;
+	my @last_fortnight;
 	foreach my $set (@data) {
 		$set->{new} = $set->{confirmed} - $confirmed;
 		$confirmed = $set->{confirmed};
 
+		$set->{new_deaths} = $set->{deaths} - $last_deaths;
+		$last_deaths = $set->{deaths};
+
 		push @last_week, $set->{new};
+		push @last_fortnight, $set->{new};
 
 		shift @last_week if @last_week > 7;
+		shift @last_fortnight if @last_fortnight > 14;
 
 		$set->{new7} = int(0.5 + sum(@last_week) / scalar @last_week);
+		$set->{new14} = int(0.5 + sum(@last_fortnight) / scalar @last_fortnight);
+
+		if ($stash{population}) {
+			my $denom = $stash{population} / 100000;
+			$set->{incidence7} = int(0.5 + 7 * (sum(@last_week) / scalar @last_week) / $denom);
+			$set->{incidence14} = int(0.5 + 14 * (sum(@last_fortnight) / scalar @last_fortnight) / $denom);
+		}
 	}
 
 	$stash{data} = \@data;
@@ -365,5 +411,9 @@ sub write_search {
 sub country_code {
 	my ($country) = @_;
 
-	return $special{$country} || country2code $country;
+	if ('world' eq $country) {
+		return 'WLD';
+	}
+
+	return $special{$country} || uc country2code $country, 'alpha-3';
 }

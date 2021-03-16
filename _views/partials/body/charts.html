@@ -1,6 +1,11 @@
 [% USE gtx = Gettext(config.po.textdomain, asset.lingua) %]
-<h3>[% gtx.gettext('New Cases Per Day') %]</h3>
+<h3>[% gtx.gettext('New Cases and Deaths') %]</h3>
 <canvas class="my-4 w-100" id="chartNewCases" width="900" height="350"></canvas>
 
 <h3>[% gtx.gettext('Accumulated Cases and Deaths') %]</h3>
 <canvas class="my-4 w-100" id="chartOther" width="900" height="350"></canvas>
+
+[% IF asset.population %]
+<h3><a href="[% gtx.gettext('https://en.wikipedia.org/wiki/Incidence_(epidemiology)') %]">[% gtx.gettext('Incidence') %]</a></h3>
+<canvas class="my-4 w-100" id="chartIncidence" width="900" height="350"></canvas>
+[% END %]

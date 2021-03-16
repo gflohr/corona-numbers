@@ -9,7 +9,13 @@
 		<th>[% gtx.gettext('Date') %]</th>
 		<th>[% gtx.gettext('Confirmed') %]</th>
 		<th>[% gtx.gettext('New Confirmed') %]</th>
+		[% IF asset.population %]
+		<th>[% gtx.gettext('14-day incidence') %]</th>
+		<th>[% gtx.gettext('7-day incidence') %]</th>
+		[% ELSE %]
+		<th>[% gtx.gettext('14-day average') %]</th>
 		<th>[% gtx.gettext('7-day average') %]</th>
+		[% END %]
 		<th>[% gtx.gettext('Recovered') %]</th>
 		<th>[% gtx.gettext('Deaths') %]</th>
 	  </tr>
@@ -20,7 +26,13 @@
 			<th class="date">[% q.strftime(gtx.gettext('%x'), record.timestamp, asset.lingua) %]</th>
 			<td>[% record.confirmed %]</td>
 			<td>[% record.new %]</td>
+			[% IF asset.population %]
+			<td>[% record.incidence14 %]</td>
+			<td>[% record.incidence7 %]</td>
+			[% ELSE %]
+			<td>[% record.new14 %]</td>
 			<td>[% record.new7 %]</td>
+			[% END %]
 			<td>[% record.recovered %]</td>
 			<td>[% record.deaths %]</td>
 		</tr>

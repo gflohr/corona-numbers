@@ -2,6 +2,7 @@
 ../_views/functions/scripts.tt
 ../_views/partials/body.html
 ../_views/partials/body/aside.html
+../_views/partials/body/chart-incidence.js
 ../_views/partials/body/chart-new.js
 ../_views/partials/body/chart-other.js
 ../_views/partials/body/charts.html
