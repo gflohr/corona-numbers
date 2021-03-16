@@ -16,8 +16,10 @@
 		<th>[% gtx.gettext('14-day average') %]</th>
 		<th>[% gtx.gettext('7-day average') %]</th>
 		[% END %]
-		<th>[% gtx.gettext('Recovered') %]</th>
-		<th>[% gtx.gettext('Deaths') %]</th>
+		<th colspan="2">[% gtx.gettext('Deaths') %]</th>
+		[% IF asset.population %]
+		<th width="1%">([% gtx.gettext('per&nbsp;100000') %])</th>
+		[% END %]
 	  </tr>
 	</thead>
 	<tbody>
@@ -33,8 +35,19 @@
 			<td>[% record.new14 %]</td>
 			<td>[% record.new7 %]</td>
 			[% END %]
-			<td>[% record.recovered %]</td>
-			<td>[% record.deaths %]</td>
+			<td>[% record.deaths %]
+			<td width="1%">
+				[% IF record.new_deaths != '' %]
+					[% IF record.new_deaths >= 0 %]
+						(+[% record.new_deaths %])
+					[% ELSE %]
+						([% record.new_deaths %])
+					[% END %]
+				[% END %]
+			</td>
+			[% IF asset.population %]
+			<td width="1%">[% record.deaths100k %]</td>
+			[% END %]	
 		</tr>
 		[% END %]
 	</tbody>
