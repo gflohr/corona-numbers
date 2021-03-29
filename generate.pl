@@ -300,7 +300,7 @@ sub write_province {
 			my $denom = $stash{population} / 100000;
 			$set->{incidence7} = int(0.5 + 7 * (sum(@last_week) / scalar @last_week) / $denom);
 			$set->{incidence14} = int(0.5 + 14 * (sum(@last_fortnight) / scalar @last_fortnight) / $denom);
-			$set->{deaths100k} = int(100000 * $set->{deaths} / $stash{population});
+			$set->{deaths100k} = int(0.5 + 100000 * $set->{deaths} / $stash{population});
 		}
 	}
 
