@@ -12,6 +12,7 @@ exclude:
 - /LocaleData
 - /lib
 - /logs
+- /population
 linguas: [en, de, bg]
 defaults:
 - files:
