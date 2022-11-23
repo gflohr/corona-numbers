@@ -15,6 +15,6 @@
   "author": "Guido Flohr <guido.flohr@cantanea.com> (http://www.guido.flohr.net/)",
   "license": "WTFPL",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.27.10"
   }
 }
